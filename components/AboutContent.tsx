@@ -3,15 +3,15 @@ import { useLang } from "@/components/LangProvider";
 import type { About } from "@/lib/types";
 
 export function AboutContent({ about }: { about: About }) {
-  const { t } = useLang();
+  const { t, locale } = useLang();
   return (
     <>
       <section className="section">
         <div className="container-x max-w-4xl">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">{about.title_en || t.about.title}</h1>
-          <p className="mt-2 text-gray-600">{about.subtitle_en || t.about.subtitle}</p>
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">{(locale === "zh" ? about.title_cn : about.title_en) || t.about.title}</h1>
+          <p className="mt-2 text-gray-600">{(locale === "zh" ? about.subtitle_cn : about.subtitle_en) || t.about.subtitle}</p>
           <h2 className="mt-10 text-xl font-semibold text-gray-900">{t.about.storyTitle}</h2>
-          <p className="mt-3 text-gray-600 leading-relaxed whitespace-pre-line">{about.content_en || t.about.storyBody}</p>
+          <p className="mt-3 text-gray-600 leading-relaxed whitespace-pre-line">{(locale === "zh" ? about.content_cn : about.content_en) || t.about.storyBody}</p>
         </div>
       </section>
       <section className="section bg-brand-50">
