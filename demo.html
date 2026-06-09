@@ -1,0 +1,1003 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sinopec Technologies Limited · 丹彩日用品 · Chinese Model & Action Figure ODM</title>
+<meta name="description" content="Sinopec Technologies Limited — Hong Kong export entity of Dongguan Red Color Materials Co., Ltd. (丹彩日用品). ODM for Chinese Model & Action Figure toys since 2012." />
+<style>
+  :root{
+    --bg:#fdfaf6; --fg:#1f1a17; --muted:#6b6259;
+    --brand-50:#fdf6f0; --brand-100:#fae8d8; --brand-200:#f4cda9;
+    --brand-300:#ecab72; --brand-400:#e4883f; --brand-500:#d96a1f;
+    --brand-600:#bf5116; --brand-700:#9c3d14;
+    --card:#ffffff; --line:rgba(0,0,0,.06);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);
+    font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .container-x{max-width:1200px;margin:0 auto;padding:0 16px}
+  @media(min-width:640px){.container-x{padding:0 24px}}
+  @media(min-width:1024px){.container-x{padding:0 32px}}
+  .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:9999px;
+    padding:12px 22px;font-size:14px;font-weight:600;line-height:1;cursor:pointer;border:0;
+    transition:background .15s, color .15s, border-color .15s, transform .05s;}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--brand-600);color:#fff;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+  .btn-primary:hover{background:var(--brand-700)}
+  .btn-ghost{background:transparent;color:var(--brand-700);border:1px solid var(--brand-200)}
+  .btn-ghost:hover{background:var(--brand-50)}
+  .card{background:var(--card);border-radius:18px;box-shadow:0 1px 2px rgba(0,0,0,.04);
+    border:1px solid var(--line);overflow:hidden}
+  .section{padding:64px 0}
+  @media(min-width:640px){.section{padding:80px 0}}
+  .eyebrow{display:inline-flex;align-items:center;border-radius:9999px;
+    background:rgba(255,255,255,.85);border:1px solid var(--line);
+    padding:4px 12px;font-size:12px;color:var(--brand-700)}
+  .h1{font-size:clamp(32px,5vw,56px);line-height:1.08;font-weight:800;letter-spacing:-.01em;margin:18px 0 0}
+  .h2{font-size:clamp(24px,3.4vw,32px);line-height:1.15;font-weight:800;letter-spacing:-.005em;margin:0}
+  .lead{color:var(--muted);font-size:16px;line-height:1.65;max-width:680px;margin:18px 0 0}
+  .muted{color:var(--muted)}
+  .label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-700);font-weight:600}
+  .pillrow{display:flex;flex-wrap:wrap;gap:8px}
+  .pill{font-size:13px;padding:6px 14px;border-radius:9999px;border:1px solid var(--line);
+    background:#fff;color:#374151;cursor:pointer;transition:all .15s}
+  .pill.active{background:var(--brand-600);color:#fff;border-color:var(--brand-600)}
+  .pill:hover:not(.active){border-color:var(--brand-300);color:var(--brand-700)}
+  input,textarea,select{width:100%;border-radius:12px;border:1px solid var(--line);
+    background:#fff;padding:10px 12px;font-size:14px;outline:none;font-family:inherit}
+  input:focus,textarea:focus{border-color:var(--brand-500);box-shadow:0 0 0 3px rgba(217,106,31,.18)}
+
+  header.site{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);
+    backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-mark{height:36px;width:36px;border-radius:10px;
+    background:linear-gradient(135deg,var(--brand-500),var(--brand-700));
+    color:#fff;display:grid;place-items:center;font-weight:800}
+  .brand-name{font-weight:700;font-size:14px;line-height:1.1}
+  .brand-sub{font-size:11px;color:var(--muted);display:none}
+  @media(min-width:640px){.brand-sub{display:block}}
+  .nav-links{display:none;gap:4px}
+  @media(min-width:768px){.nav-links{display:flex}}
+  .nav-link{padding:8px 12px;border-radius:8px;font-size:14px;color:#374151}
+  .nav-link.active{color:var(--brand-700);background:var(--brand-50)}
+  .nav-link:hover{color:var(--brand-700);background:rgba(244,205,169,.5)}
+  .mobile-nav{display:flex;gap:4px;overflow-x:auto;border-top:1px solid var(--line);padding:8px 16px}
+  @media(min-width:768px){.mobile-nav{display:none}}
+  .mobile-nav a{white-space:nowrap;padding:6px 12px;font-size:13px;border-radius:8px;color:#374151}
+  .lang{display:inline-flex;border:1px solid var(--line);background:#fff;
+    border-radius:9999px;padding:2px;font-size:12px}
+  .lang button{padding:6px 12px;border-radius:9999px;border:0;background:transparent;
+    color:#4b5563;cursor:pointer}
+  .lang button.active{background:var(--brand-600);color:#fff}
+
+  footer.site{margin-top:64px;border-top:1px solid var(--line);background:#fff}
+  .foot-grid{display:grid;gap:40px;padding:48px 0;grid-template-columns:1fr}
+  @media(min-width:768px){.foot-grid{grid-template-columns:2fr 1fr 1fr}}
+  .foot-h{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+  .foot-bottom{border-top:1px solid var(--line);padding:16px 0;font-size:12px;color:var(--muted);
+    display:flex;flex-direction:column;gap:8px;align-items:flex-start;justify-content:space-between}
+  @media(min-width:640px){.foot-bottom{flex-direction:row;align-items:center}}
+
+  .hero{position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.92;
+    background:radial-gradient(1200px 600px at 80% -10%,#f4cda9 0%,transparent 60%),
+               radial-gradient(900px 500px at -10% 20%,#fae8d8 0%,transparent 60%),
+               linear-gradient(180deg,#fdf6f0 0%,#ffffff 100%)}
+  .hero-grid{display:grid;gap:40px;align-items:center}
+  @media(min-width:1024px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:48px}}
+  .hero-art{position:relative;aspect-ratio:5/4;border-radius:24px;
+    background:linear-gradient(135deg,#f4cda9,#fae8d8,#fff);
+    box-shadow:0 25px 50px -12px rgba(0,0,0,.25);border:1px solid var(--line);
+    display:grid;place-items:center;overflow:hidden}
+  .hero-art img{width:100%;height:100%;object-fit:cover}
+  .floating-card{position:absolute;background:#fff;border-radius:14px;padding:10px 14px;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);border:1px solid var(--line);display:none;max-width:240px}
+  @media(min-width:640px){.floating-card{display:block}}
+  .floating-card .fc-k{font-size:11px;color:var(--muted)}
+  .floating-card .fc-v{font-size:13px;font-weight:600;line-height:1.3}
+  .fc-bl{bottom:-20px;left:-20px}
+  .fc-tr{top:-16px;right:-16px}
+
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:-8px}
+  @media(min-width:640px){.stats{grid-template-columns:repeat(4,1fr);gap:20px}}
+  .stat{text-align:center;padding:18px 12px}
+  .stat-v{font-size:28px;font-weight:800;color:var(--brand-700)}
+  @media(min-width:640px){.stat-v{font-size:32px}}
+  .stat-l{font-size:12px;color:var(--muted);margin-top:4px}
+  @media(min-width:640px){.stat-l{font-size:13px}}
+
+  .grid-products{display:grid;grid-template-columns:1fr;gap:18px}
+  @media(min-width:640px){.grid-products{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1024px){.grid-products{grid-template-columns:repeat(3,1fr)}}
+  .grid-feat{grid-template-columns:1fr;gap:18px}
+  @media(min-width:640px){.grid-feat{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1024px){.grid-feat{grid-template-columns:repeat(4,1fr)}}
+  .pcard{transition:box-shadow .15s, transform .15s;display:block}
+  .pcard:hover{box-shadow:0 8px 24px rgba(0,0,0,.06)}
+  .pcard-img{aspect-ratio:4/3;background:#eee;overflow:hidden}
+  .pcard-img.feat{aspect-ratio:1/1}
+  .pcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .25s}
+  .pcard:hover .pcard-img img{transform:scale(1.02)}
+  .pcard-body{padding:14px 16px 18px}
+  .pcard-cat{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-700);font-weight:600}
+  .pcard-name{margin-top:6px;font-size:14px;font-weight:700;color:#111}
+  .pcard-sub{margin-top:2px;font-size:11px;color:var(--muted)}
+
+  .form-grid{display:grid;gap:14px}
+  .form-row{display:grid;gap:14px;grid-template-columns:1fr}
+  @media(min-width:640px){.form-row{grid-template-columns:1fr 1fr}}
+  .field label{display:block;font-size:12px;font-weight:500;color:#374151;margin-bottom:6px}
+  .form-card{padding:24px}
+  @media(min-width:640px){.form-card{padding:32px}}
+  .okbox{background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;padding:18px;border-radius:14px;font-size:14px}
+  .errbox{background:#fef2f2;border:1px solid #fecaca;color:#991b1b;padding:10px 12px;border-radius:10px;font-size:13px}
+
+  .crumb{font-size:13px;color:var(--muted);margin-bottom:18px}
+  .crumb a{color:var(--brand-700)}
+  .detail-grid{display:grid;gap:40px}
+  @media(min-width:1024px){.detail-grid{grid-template-columns:1fr 1fr;gap:48px}}
+  .specs{border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .specs .row{display:grid;grid-template-columns:1fr 1fr;padding:10px 16px;font-size:13.5px}
+  .specs .row + .row{border-top:1px solid var(--line)}
+  .specs .k{color:var(--muted)}
+  .about-2col{display:grid;gap:24px;grid-template-columns:1fr}
+  @media(min-width:768px){.about-2col{grid-template-columns:1fr 1fr}}
+  .values{display:grid;gap:18px;grid-template-columns:1fr}
+  @media(min-width:640px){.values{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1024px){.values{grid-template-columns:repeat(4,1fr)}}
+  .gallery{display:grid;gap:12px;grid-template-columns:repeat(2,1fr);margin-top:12px}
+  @media(min-width:768px){.gallery{grid-template-columns:repeat(3,1fr)}}
+  .gallery .card{aspect-ratio:4/3;overflow:hidden}
+  .gallery img{width:100%;height:100%;object-fit:cover}
+  .gallery .cap{padding:10px 12px;font-size:12px;color:var(--muted);background:#fff}
+
+  .partners-region{display:grid;gap:18px;grid-template-columns:1fr}
+  @media(min-width:768px){.partners-region{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1024px){.partners-region{grid-template-columns:repeat(4,1fr)}}
+  .region-card{padding:24px}
+  .region-h{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+  .region-flag{font-size:20px}
+  .partner-list{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+  .partner-list li{font-size:14px;color:#1f1a17;display:flex;align-items:center;gap:8px}
+  .partner-list li::before{content:"•";color:var(--brand-600);font-weight:700}
+
+  .contact-grid{display:grid;gap:40px}
+  @media(min-width:1024px){.contact-grid{grid-template-columns:1fr 1.1fr;gap:48px}}
+  .info-card{padding:20px}
+  .info-row{display:flex;align-items:flex-start;gap:10px;margin-top:8px;font-size:14px;color:#374151}
+  .info-row .k{color:var(--muted);min-width:84px}
+  .page{display:none}
+  .page.active{display:block}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="container-x nav">
+    <a href="#" data-nav="home" class="brand">
+      <div class="brand-mark">S</div>
+      <div>
+        <div class="brand-name">Sinopec Technologies</div>
+        <div class="brand-sub" data-i18n="brand-sub">丹彩日用品 · Export</div>
+      </div>
+    </a>
+    <nav class="nav-links" id="navLinks"></nav>
+    <div class="lang" role="tablist" aria-label="Language">
+      <button data-set-lang="zh" type="button">中文</button>
+      <button data-set-lang="en" type="button">EN</button>
+    </div>
+  </div>
+  <nav class="mobile-nav container-x" id="mobileNav"></nav>
+</header>
+
+<main id="main">
+
+  <!-- HOME -->
+  <section class="page active" data-page="home">
+    <div class="hero">
+      <div class="container-x section hero-grid">
+        <div>
+          <span class="eyebrow" data-i18n="hero-eyebrow">Chinese Model & Action Figure Toys ODM</span>
+          <h1 class="h1" data-i18n="hero-title">From Dongguan to the world.<br/>Crafted figures since 2012.</h1>
+          <p class="lead" data-i18n="hero-sub">Sinopec Technologies Limited is the Hong Kong export arm of Dongguan Red Color Materials Co., Ltd. (丹彩日用品) — designing and producing licensed IP figures, designer toys, cultural figures and die-cast collectibles for global brands.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:28px">
+            <a href="#" data-nav="products" class="btn btn-primary" data-i18n="hero-cta1">View Products</a>
+            <a href="#" data-nav="contact" class="btn btn-ghost" data-i18n="hero-cta2">Request a Quote</a>
+          </div>
+        </div>
+        <div>
+          <div class="hero-art">
+            <img src="https://images.unsplash.com/photo-1608889335941-32ac5f2041b9?w=1000&q=80" alt="Designer toy" />
+            <div class="floating-card fc-bl">
+              <div class="fc-k" data-i18n="fc-factory-k">Factory (Mainland)</div>
+              <div class="fc-v" data-bind="factoryName">Dongguan Red Color Materials Co., Ltd.</div>
+            </div>
+            <div class="floating-card fc-tr">
+              <div class="fc-k" data-i18n="fc-export-k">Export (Hong Kong)</div>
+              <div class="fc-v">Sinopec Technologies Limited</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-x">
+      <div class="stats" id="stats"></div>
+    </div>
+
+    <div class="section">
+      <div class="container-x">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:28px">
+          <div>
+            <h2 class="h2" data-i18n="feat-title">New for 2025</h2>
+            <p class="muted" style="font-size:14px;margin:6px 0 0" data-i18n="feat-sub">11 IP series launched in 2025 — Dachshunds, Puppies' Trip, Siamese Cats, Momo's Series, Runa Kitty, Magirl, TutuLong III, Miyee Cafe and more.</p>
+          </div>
+          <a href="#" data-nav="products" style="font-size:14px;color:var(--brand-700);white-space:nowrap" data-i18n="feat-cta">View All →</a>
+        </div>
+        <div class="grid-feat" id="featGrid"></div>
+      </div>
+    </div>
+
+    <div class="section" style="background:linear-gradient(180deg,#fff,var(--brand-50))">
+      <div class="container-x" style="display:grid;gap:48px;grid-template-columns:1fr">
+        <div class="about-2col" style="align-items:start">
+          <div>
+            <h2 class="h2" data-i18n="about-prev-title">Who we are</h2>
+            <p class="muted" style="margin-top:14px;line-height:1.8" data-i18n="about-prev-body">Established in 2012, Sinopec Technologies Limited entered the international trade field. After a decade of producing export orders, we ventured into the designer toy and action figure sector in 2022. Today our factory delivers a 99.5% excellent product rate — from prototype to mass production.</p>
+            <a href="#" data-nav="about" class="btn btn-ghost" style="margin-top:22px" data-i18n="about-prev-cta">Read More</a>
+          </div>
+          <div style="display:grid;gap:16px;grid-template-columns:1fr">
+            <div class="card info-card">
+              <div class="label" data-i18n="factory-label">Manufacturing Entity</div>
+              <div style="margin-top:6px;font-weight:600" data-bind="factoryName">Dongguan Red Color Materials Co., Ltd.</div>
+              <div class="muted" style="font-size:13px;margin-top:2px" data-bind="factoryAddr">Room 506, Building 16, Qishi Town, Dongguan, Guangdong, China</div>
+              <div class="muted" style="font-size:12px;margin-top:10px" data-bind="factoryRole">Designer toys & action figure ODM factory</div>
+            </div>
+            <div class="card info-card">
+              <div class="label" data-i18n="export-label">Export Entity (Hong Kong)</div>
+              <div style="margin-top:6px;font-weight:600">Sinopec Technologies Limited</div>
+              <div class="muted" style="font-size:13px;margin-top:2px" data-bind="exportAddr">Hong Kong</div>
+              <div class="muted" style="font-size:12px;margin-top:10px" data-bind="exportRole">International trade, contracts, logistics & settlement</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container-x" style="display:grid;gap:40px;grid-template-columns:1fr">
+        <div class="contact-grid">
+          <div>
+            <h2 class="h2" data-i18n="contact-title">Contact</h2>
+            <p class="muted" style="margin-top:10px" data-i18n="contact-sub">We will reply to your inquiry within 24 hours</p>
+            <ul style="margin-top:22px;padding:0;list-style:none;font-size:14px;color:#374151;line-height:2">
+              <li><span class="muted" data-i18n="lbl-phone">Phone：</span>+86 150 1943 1630</li>
+              <li><span class="muted" data-i18n="lbl-email">Email：</span><a href="mailto:cherryshi2012@126.com" style="color:var(--brand-700)">cherryshi2012@126.com</a></li>
+              <li><span class="muted" data-i18n="lbl-factory">Factory：</span><span data-bind="factoryName"></span></li>
+              <li><span class="muted" data-bind="factoryAddr"></span></li>
+            </ul>
+          </div>
+          <div class="card form-card">
+            <div id="homeFormMount"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS LIST -->
+  <section class="page" data-page="products">
+    <div class="section">
+      <div class="container-x">
+        <div style="max-width:760px">
+          <h1 class="h1" style="font-size:clamp(28px,4vw,40px)" data-i18n="prod-title">Our Products</h1>
+          <p class="lead" data-i18n="prod-sub">New IP launches in 2025, plus our previous project portfolio — renowned IP, cultural figures, car models and more.</p>
+        </div>
+        <div style="margin-top:28px;display:grid;gap:12px;grid-template-columns:1fr;align-items:center">
+          <input id="searchInput" type="search" data-i18n-ph="prod-search" placeholder="Search product or series…" />
+        </div>
+        <div class="pillrow" id="filterPills" style="margin-top:14px"></div>
+        <div class="grid-products" id="prodGrid" style="margin-top:28px"></div>
+        <div id="prodEmpty" class="card" style="margin-top:24px;padding:36px;text-align:center;color:var(--muted);font-size:14px;display:none" data-i18n="prod-empty">No matching products found.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT DETAIL -->
+  <section class="page" data-page="detail">
+    <div class="section">
+      <div class="container-x">
+        <div class="crumb"><a href="#" data-nav="products" data-i18n="prod-title">Our Products</a> · <span id="detCrumb"></span></div>
+        <div class="detail-grid" id="detGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="page" data-page="about">
+    <div class="section">
+      <div class="container-x" style="max-width:920px">
+        <h1 class="h1" style="font-size:clamp(28px,4vw,40px)" data-i18n="about-title">About Us</h1>
+        <p class="lead" data-i18n="about-sub">Sinopec Technologies Limited (HK) + Dongguan Red Color Materials Co., Ltd. (丹彩日用品) — an ODM partnership serving global clients.</p>
+
+        <h2 style="font-size:20px;font-weight:700;margin:48px 0 0" data-i18n="about-who-t">Who We Are</h2>
+        <p class="muted" style="line-height:1.85;margin-top:12px" data-i18n="about-who-b">Sinopec Technologies, Ltd. was established in 2012 and entered the international trade field. The company has been specializing in producing export orders for more than ten years and ventured into the designer toy and action figure sector in 2022. With a strong team of engineers dedicated to product development and skilled workers with over ten years of production experience overseeing quality control, our products now boast a 99.5% excellent product rate. Prototypes can be customized from the design phase to mold-making and production, allowing the selection of the best materials during the prototype stage to achieve the highest product quality. The factory has dedicated clean rooms for mass production to ensure flawless final products.</p>
+
+        <h2 style="font-size:20px;font-weight:700;margin:40px 0 0" data-i18n="about-fp-t">Our Footprint</h2>
+        <p class="muted" style="line-height:1.85;margin-top:12px" data-i18n="about-fp-b">As an ODM in the industry, we possess strong price competitiveness and have stable raw material suppliers and partner factories. As an international trading company, we have been pursuing a global expansion strategy since our establishment. We have long-term partnerships with renowned companies, including <strong style="color:#1f1a17">Walmart, Target, Disney, and Melissa & Doug</strong> in the United States; <strong style="color:#1f1a17">Nikkan, Chica, and Mato</strong> in Japan; <strong style="color:#1f1a17">Bathtime</strong> in Europe; and <strong style="color:#1f1a17">Asura</strong> in South Africa.</p>
+      </div>
+    </div>
+
+    <div class="section" style="background:var(--brand-50)">
+      <div class="container-x about-2col">
+        <div class="card" style="padding:28px">
+          <div class="label" data-i18n="about-fac-t">Manufacturing Entity (Production)</div>
+          <div style="margin-top:8px;font-size:18px;font-weight:700" data-bind="factoryName"></div>
+          <div class="muted" style="font-size:13px" data-bind="factoryAddr"></div>
+          <p class="muted" style="margin-top:14px;font-size:14px;line-height:1.75" data-i18n="about-fac-b">The Dongguan factory runs complete in-house production lines — including clean rooms dedicated to mass production — covering the full journey from 3D modeling and prototyping to bulk shipment. Every product passes multi-stage QC, with a long-term pass rate above 99.5%.</p>
+        </div>
+        <div class="card" style="padding:28px">
+          <div class="label" data-i18n="about-exp-t">Export Entity (Hong Kong · Sinopec Technologies Limited)</div>
+          <div style="margin-top:8px;font-size:18px;font-weight:700">Sinopec Technologies Limited</div>
+          <div class="muted" style="font-size:13px">Hong Kong</div>
+          <p class="muted" style="margin-top:14px;font-size:14px;line-height:1.75" data-i18n="about-exp-b">The Hong Kong entity handles quotations, contracts, international logistics and settlement. Customers enjoy smoother trading, payment and invoicing — backed by the capacity and quality control of our China factory.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container-x values" id="valuesGrid"></div>
+    </div>
+  </section>
+
+  <!-- OUR COMPANY (factory tour) -->
+  <section class="page" data-page="company">
+    <div class="section">
+      <div class="container-x" style="max-width:920px">
+        <h1 class="h1" style="font-size:clamp(28px,4vw,40px)" data-i18n="co-title">Our Company</h1>
+        <p class="lead" data-i18n="co-sub">A look inside the Dongguan factory — production lines, clean rooms, and the team behind every figure.</p>
+      </div>
+    </div>
+    <div class="section" style="padding-top:0">
+      <div class="container-x">
+        <div class="gallery" id="factoryGallery"></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container-x about-2col" style="max-width:920px">
+        <div class="card" style="padding:28px">
+          <div class="label" data-i18n="lbl-factory">Factory Address</div>
+          <div style="margin-top:8px;font-size:18px;font-weight:700" data-bind="factoryName"></div>
+          <div style="font-size:14px;color:#374151;margin-top:6px" data-bind="factoryAddr"></div>
+          <p class="muted" style="margin-top:14px;font-size:14px;line-height:1.7" data-i18n="co-visit">If you are interested in visiting our factory, please set your map direction to the address above. We welcome on-site meetings and audits.</p>
+        </div>
+        <div class="card" style="padding:28px">
+          <div class="label" data-i18n="lbl-export">Export Entity</div>
+          <div style="margin-top:8px;font-size:18px;font-weight:700">Sinopec Technologies Limited</div>
+          <div style="font-size:14px;color:#374151;margin-top:6px" data-bind="exportAddr"></div>
+          <p class="muted" style="margin-top:14px;font-size:14px;line-height:1.7" data-i18n="co-export">The Hong Kong office handles all international sales, contracts, logistics coordination and settlement — your single point of contact for global orders.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="page" data-page="partners">
+    <div class="section">
+      <div class="container-x" style="max-width:1100px">
+        <h1 class="h1" style="font-size:clamp(28px,4vw,40px)" data-i18n="pa-title">Our Partners</h1>
+        <p class="lead" data-i18n="pa-sub">Long-term partnerships across North America, Japan, Europe and South Africa.</p>
+        <div class="partners-region" id="partnersGrid" style="margin-top:40px"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="page" data-page="contact">
+    <div class="section">
+      <div class="container-x contact-grid">
+        <div>
+          <h1 class="h1" style="font-size:clamp(28px,4vw,40px)" data-i18n="contact-title">Contact</h1>
+          <p class="lead" data-i18n="contact-sub">We will reply to your inquiry within 24 hours.</p>
+          <div class="card" style="padding:24px;margin-top:24px">
+            <div class="label" data-i18n="lbl-factory">Factory</div>
+            <div style="margin-top:8px;font-weight:600" data-bind="factoryName"></div>
+            <div class="muted" style="font-size:13px" data-bind="factoryAddr"></div>
+            <div style="margin-top:18px">
+              <div class="info-row"><div class="k" data-i18n="lbl-phone">Phone</div><div>+86 150 1943 1630</div></div>
+              <div class="info-row"><div class="k" data-i18n="lbl-email">Email</div><div><a href="mailto:cherryshi2012@126.com" style="color:var(--brand-700)">cherryshi2012@126.com</a></div></div>
+            </div>
+          </div>
+          <div class="card" style="padding:24px;margin-top:18px">
+            <div class="label" data-i18n="lbl-export">Export Entity</div>
+            <div style="margin-top:8px;font-weight:600">Sinopec Technologies Limited</div>
+            <div class="muted" style="font-size:13px" data-bind="exportAddr"></div>
+          </div>
+        </div>
+        <div class="card form-card">
+          <div id="contactFormMount"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="container-x">
+    <div class="foot-grid">
+      <div>
+        <div class="brand">
+          <div class="brand-mark">S</div>
+          <div>
+            <div class="brand-name">Sinopec Technologies Limited</div>
+            <div class="muted" style="font-size:12px" data-i18n="brand-tag">Chinese Model & Action Figure Toys ODM</div>
+          </div>
+        </div>
+        <p class="muted" style="margin-top:14px;font-size:14px;max-width:480px">Hong Kong export arm of <span data-bind="factoryName"></span> · <span data-bind="factoryRole"></span></p>
+      </div>
+      <div>
+        <div class="foot-h" data-i18n="factory-label">Manufacturing Entity</div>
+        <div style="font-size:14px;font-weight:600" data-bind="factoryName"></div>
+        <div class="muted" style="font-size:13px;margin-top:4px" data-bind="factoryAddr"></div>
+        <div class="muted" style="font-size:12px;margin-top:6px">📞 +86 150 1943 1630</div>
+        <div class="muted" style="font-size:12px;margin-top:2px">✉ <a href="mailto:cherryshi2012@126.com" style="color:var(--brand-700)">cherryshi2012@126.com</a></div>
+      </div>
+      <div>
+        <div class="foot-h" data-i18n="export-label">Export Entity (Hong Kong)</div>
+        <div style="font-size:14px;font-weight:600">Sinopec Technologies Limited</div>
+        <div class="muted" style="font-size:13px;margin-top:4px" data-bind="exportAddr"></div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© <span id="year"></span> Sinopec Technologies Limited. <span data-i18n="rights">All rights reserved</span>.</div>
+      <div style="display:flex;gap:14px;align-items:center"><a href="#" data-nav="contact" style="color:var(--brand-700)" data-i18n="nav-contact">Contact</a><span>·</span><span>丹彩日用品 (Dongguan)</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ============= i18n =============
+const I18N = {
+  en: {
+    "brand-sub": "丹彩日用品 · Export",
+    "brand-tag": "Chinese Model & Action Figure Toys ODM",
+    "hero-eyebrow": "Chinese Model & Action Figure Toys ODM",
+    "hero-title": "From Dongguan to the world.\nCrafted figures since 2012.",
+    "hero-sub": "Sinopec Technologies Limited is the Hong Kong export arm of Dongguan Red Color Materials Co., Ltd. (丹彩日用品) — designing and producing licensed IP figures, designer toys, cultural figures and die-cast collectibles for global brands.",
+    "hero-cta1": "View Products", "hero-cta2": "Request a Quote",
+    "fc-factory-k": "Factory (Mainland)", "fc-export-k": "Export (Hong Kong)",
+    "feat-title": "New for 2025", "feat-sub": "11 IP series launched in 2025 — Dachshunds, Puppies' Trip, Siamese Cats, Momo's Series, Runa Kitty, Magirl, TutuLong III, Miyee Cafe and more.", "feat-cta": "View All →",
+    "about-prev-title": "Who we are",
+    "about-prev-body": "Established in 2012, Sinopec Technologies Limited entered the international trade field. After a decade of producing export orders, we ventured into the designer toy and action figure sector in 2022. Today our factory delivers a 99.5% excellent product rate — from prototype to mass production.",
+    "about-prev-cta": "Read More",
+    "about-title": "About Us",
+    "about-sub": "Sinopec Technologies Limited (HK) + Dongguan Red Color Materials Co., Ltd. (丹彩日用品) — an ODM partnership serving global clients.",
+    "about-who-t": "Who We Are",
+    "about-who-b": "Sinopec Technologies, Ltd. was established in 2012 and entered the international trade field. The company has been specializing in producing export orders for more than ten years and ventured into the designer toy and action figure sector in 2022. With a strong team of engineers dedicated to product development and skilled workers with over ten years of production experience overseeing quality control, our products now boast a 99.5% excellent product rate. Prototypes can be customized from the design phase to mold-making and production, allowing the selection of the best materials during the prototype stage to achieve the highest product quality. The factory has dedicated clean rooms for mass production to ensure flawless final products.",
+    "about-fp-t": "Our Footprint",
+    "about-fp-b": "As an ODM in the industry, we possess strong price competitiveness and have stable raw material suppliers and partner factories. As an international trading company, we have been pursuing a global expansion strategy since our establishment. We have long-term partnerships with renowned companies, including Walmart, Target, Disney, and Melissa & Doug in the United States; Nikkan, Chica, and Mato in Japan; Bathtime in Europe; and Asura in South Africa.",
+    "about-fac-t": "Manufacturing Entity (Production)",
+    "about-fac-b": "The Dongguan factory runs complete in-house production lines — including clean rooms dedicated to mass production — covering the full journey from 3D modeling and prototyping to bulk shipment. Every product passes multi-stage QC, with a long-term pass rate above 99.5%.",
+    "about-exp-t": "Export Entity (Hong Kong · Sinopec Technologies Limited)",
+    "about-exp-b": "The Hong Kong entity handles quotations, contracts, international logistics and settlement. Customers enjoy smoother trading, payment and invoicing — backed by the capacity and quality control of our China factory.",
+    "prod-title": "Our Products",
+    "prod-sub": "New IP launches in 2025, plus our previous project portfolio — renowned IP, cultural figures, car models and more.",
+    "prod-search": "Search product or series…",
+    "prod-empty": "No matching products found.",
+    "prod-cat-all": "All",
+    "prod-cat-2025": "New for 2025",
+    "prod-cat-IP": "Renowned IP Series",
+    "prod-cat-cultural": "Cultural Figures",
+    "prod-cat-car": "Car Models",
+    "prod-cat-other": "Previous Projects",
+    "contact-title": "Contact", "contact-sub": "We will reply to your inquiry within 24 hours",
+    "lbl-phone": "Phone", "lbl-email": "Email", "lbl-factory": "Factory", "lbl-export": "Export Entity",
+    "factory-label": "Manufacturing Entity (Mainland)",
+    "export-label": "Export Entity (Hong Kong)",
+    "co-title": "Our Company",
+    "co-sub": "A look inside the Dongguan factory — production lines, clean rooms, and the team behind every figure.",
+    "co-visit": "If you are interested in visiting our factory, please set your map direction to the address above. We welcome on-site meetings and audits.",
+    "co-export": "The Hong Kong office handles all international sales, contracts, logistics coordination and settlement — your single point of contact for global orders.",
+    "pa-title": "Our Partners",
+    "pa-sub": "Long-term partnerships across North America, Japan, Europe and South Africa.",
+    "nav-home": "Home", "nav-about": "About", "nav-company": "Our Company", "nav-products": "Products", "nav-partners": "Partners", "nav-contact": "Contact",
+    "f-name": "Your name", "f-company": "Company (optional)", "f-email": "Email *", "f-phone": "Phone / WhatsApp (optional)", "f-product": "Product of interest (optional)", "f-message": "Your message *",
+    "f-submit": "Submit Inquiry", "f-submitting": "Submitting…",
+    "f-ok": "We've received your inquiry and will be in touch soon.",
+    "f-err": "Submission failed. Please try again or email us directly.",
+    "specs": "Specifications",
+    "rights": "All rights reserved",
+    "stats": [
+      { v: "13+", l: "Years in trade" },
+      { v: "3+", l: "Years in toys/figures" },
+      { v: "99.5%", l: "Excellent rate" },
+      { v: "15+", l: "Global partners" },
+    ],
+    "values": [
+      { t: "Quality First", b: "Multi-stage QC; clean rooms for mass production; long-term pass rate above 99.5%." },
+      { t: "Full ODM Cycle", b: "From design and mold-making to prototyping and bulk production — all in-house." },
+      { t: "Global Network", b: "Long-term partnerships with renowned brands in NA, Japan, Europe and South Africa." },
+      { t: "Trustworthy Trade", b: "HK office for smoother contracts, payment, invoicing and logistics." },
+    ],
+  },
+  zh: {
+    "brand-sub": "丹彩日用品 · 香港出口",
+    "brand-tag": "中国潮玩 / 动作玩偶 ODM 工厂",
+    "hero-eyebrow": "中国潮玩 / 动作玩偶 ODM",
+    "hero-title": "从东莞到世界\n2012 年起，匠心制物",
+    "hero-sub": "Sinopec Technologies Limited（香港）是东莞市丹彩日用品有限公司的出口窗口。专注潮玩、动作玩偶、IP 授权形象、文化主题与合金模型的研发与生产，服务全球品牌。",
+    "hero-cta1": "查看产品", "hero-cta2": "立即询盘",
+    "fc-factory-k": "工厂（内地）", "fc-export-k": "出口（香港）",
+    "feat-title": "2025 新品", "feat-sub": "11 个 IP 系列：腊肠狗、狗狗环游世界、暹罗猫、Momo's Series、Runa Kitty、Magirl、TutuLong III、Miyee Cafe 等。", "feat-cta": "查看全部 →",
+    "about-prev-title": "关于我们",
+    "about-prev-body": "Sinopec Technologies Limited 成立于 2012 年，进入国际贸易领域。前十年专注出口订单，2022 年起切入潮玩 / 动作玩偶赛道。工厂当前保持 99.5% 优良品率，覆盖从原型到量产的全流程。",
+    "about-prev-cta": "了解更多",
+    "about-title": "关于我们",
+    "about-sub": "Sinopec Technologies Limited（香港）+ 东莞市丹彩日用品有限公司 — 双实体 ODM 合作，服务全球客户。",
+    "about-who-t": "我们是谁",
+    "about-who-b": "Sinopec Technologies, Ltd. 成立于 2012 年，专注国际贸易领域。十年出口订单积淀后，2022 年正式切入潮玩 / 动作玩偶赛道。团队拥有经验丰富的工程师负责产品研发，以及十余年生产经验的熟练工人把关品控，目前工厂产品优良率稳定在 99.5%。原型阶段即可从设计、开模到生产进行定制，选用最合适的材料以达到最高品质。工厂配备专用无尘车间，确保量产产品零瑕疵。",
+    "about-fp-t": "全球足迹",
+    "about-fp-b": "作为行业内的 ODM 厂商，我们拥有强大的价格竞争力与稳定的原材料供应及合作工厂。自成立以来，公司一直推行全球扩张战略，与多个知名企业保持长期合作：美国 Walmart、Target、Disney、Melissa & Doug；日本 Nikkan、Chica、Mato；欧洲 Bathtime；南非 Asura。",
+    "about-fac-t": "工厂主体（生产端）",
+    "about-fac-b": "东莞工厂拥有完整的内部产线，包括专用于批量生产的无尘车间，覆盖从 3D 建模、原型打样到批量出货的全流程。所有产品经过多道质检，长期优良率保持在 99.5% 以上。",
+    "about-exp-t": "出口业务（香港 Sinopec Technologies Limited）",
+    "about-exp-b": "香港实体负责对外报价、订单合同、国际物流与结算。客户在交易、付款、开票上更便利，同时享受中国大陆工厂的产能与品控。",
+    "prod-title": "产品中心",
+    "prod-sub": "2025 新品 IP 系列 + 历年项目合集 — 知名 IP、文化主题、车模等。",
+    "prod-search": "搜索产品或系列…",
+    "prod-empty": "未找到匹配的产品。",
+    "prod-cat-all": "全部",
+    "prod-cat-2025": "2025 新品",
+    "prod-cat-IP": "知名 IP 系列",
+    "prod-cat-cultural": "文化主题",
+    "prod-cat-car": "合金车模",
+    "prod-cat-other": "历年项目",
+    "contact-title": "联系我们", "contact-sub": "我们会在 24 小时内回复您的询盘",
+    "lbl-phone": "电话", "lbl-email": "邮箱", "lbl-factory": "工厂", "lbl-export": "出口实体",
+    "factory-label": "工厂主体（内地）",
+    "export-label": "出口实体（香港）",
+    "co-title": "工厂一览",
+    "co-sub": "东莞工厂实景 — 产线、无尘车间、以及作品背后的团队。",
+    "co-visit": "如您有意到访工厂，请按上方地址设置导航。我们欢迎现场会议与验厂。",
+    "co-export": "香港办公室负责所有国际销售、合同、物流协调与结算 — 您对接全球订单的统一窗口。",
+    "pa-title": "合作伙伴",
+    "pa-sub": "北美、日本、欧洲、南非 — 长期合作的客户与品牌。",
+    "nav-home": "首页", "nav-about": "关于我们", "nav-company": "工厂一览", "nav-products": "产品中心", "nav-partners": "合作伙伴", "nav-contact": "联系我们",
+    "f-name": "您的姓名", "f-company": "公司名称（可选）", "f-email": "邮箱 *", "f-phone": "电话 / WhatsApp（可选）", "f-product": "感兴趣的产品（可选）", "f-message": "您的需求描述 *",
+    "f-submit": "提交询盘", "f-submitting": "提交中…",
+    "f-ok": "已收到您的询盘，我们会尽快联系您。",
+    "f-err": "提交失败，请稍后再试或直接邮件联系。",
+    "specs": "产品参数",
+    "rights": "版权所有",
+    "stats": [
+      { v: "13+", l: "年贸易经验" },
+      { v: "3+", l: "年潮玩 / 玩偶经验" },
+      { v: "99.5%", l: "出厂优良率" },
+      { v: "15+", l: "全球合作伙伴" },
+    ],
+    "values": [
+      { t: "品质优先", b: "多道质检 + 无尘车间量产，长期优良率 99.5% 以上。" },
+      { t: "全流程 ODM", b: "设计 / 开模 / 打样 / 量产 一体化，全部自有产线。" },
+      { t: "全球网络", b: "北美、日本、欧洲、南非知名品牌的长期合作。" },
+      { t: "诚信贸易", b: "香港负责合同、付款、开票与物流，对接更顺畅。" },
+    ],
+  },
+};
+
+const ENTITY = {
+  en: {
+    factoryName: "Dongguan Red Color Materials Co., Ltd. (丹彩日用品)",
+    factoryAddr: "Room 506, Building 16, Qishi Town, Dongguan, Guangdong, China",
+    factoryRole: "Designer toys & action figure ODM factory",
+    exportAddr: "Hong Kong",
+    exportRole: "International trade, contracts, logistics & settlement",
+  },
+  zh: {
+    factoryName: "东莞市丹彩日用品有限公司",
+    factoryAddr: "广东省东莞市企石镇 16 栋 506 室",
+    factoryRole: "潮玩 / 动作玩偶 ODM 工厂",
+    exportAddr: "中国香港",
+    exportRole: "国际贸易、合同、物流与结算",
+  },
+};
+
+// 11 个 2025 新品 + 历史项目，全部来自原网站
+const PRODUCTS = [
+  // 2025 新品
+  { id:"dachshund", cat:"2025", series:"Dachshund", img:"https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=800&q=80",
+    name_en:"Daily Actions of Dachshunds Series (Creamy-Chocolate)",
+    name_zh:"腊肠狗日常系列（奶油巧克力）",
+    desc_en:"Cute dachshund figures capturing daily-life moments. Two-tone creamy & chocolate colorways.",
+    desc_zh:"可爱的腊肠狗形象，捕捉日常生活瞬间。双色奶油与巧克力配色。",
+    specs:[["Series","Daily Actions"],["Material","PVC"],["Color","Creamy · Chocolate"]] },
+  { id:"puppies-trip", cat:"2025", series:"Puppies' Trip", img:"https://images.unsplash.com/photo-1591946614720-90a587da4a36?w=800&q=80",
+    name_en:"Puppies Travelling Around the World Series",
+    name_zh:"狗狗环游世界系列",
+    desc_en:"Puppies on a journey around the world. A collectible set of travel-themed figures.",
+    desc_zh:"小狗环游世界主题，是一套旅行主题收藏玩偶。",
+    specs:[["Series","Puppies' Trip"],["Material","PVC"],["Theme","Travel"]] },
+  { id:"siamese", cat:"2025", series:"Siamese", img:"https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?w=800&q=80",
+    name_en:"Color-Changing Siamese Cat Series",
+    name_zh:"变色暹罗猫系列",
+    desc_en:"Color-changing Siamese cat figures — temperature- or light-reactive color shifts.",
+    desc_zh:"可变色暹罗猫玩偶，温度或光线触发色彩变化。",
+    specs:[["Series","Color-Changing"],["Material","PVC"],["Feature","Thermochromic"]] },
+  { id:"momo-miyee", cat:"2025", series:"Momo × Miyee", img:"https://images.unsplash.com/photo-1558877385-81a1c7e67d72?w=800&q=80",
+    name_en:"Momo's Series × Miyee Cafe",
+    name_zh:"Momo's Series × Miyee Cafe 联名",
+    desc_en:"Momo's Garden / Winter / Magic Dragon Academy sets — Miyee Cafe collaboration.",
+    desc_zh:"Momo's Garden / 冬季 / 魔法龙学院三套，与 Miyee Cafe 联名。",
+    specs:[["Series","Momo's Series"],["Material","PVC + Resin"],["Collab","Miyee Cafe"]] },
+  { id:"runa", cat:"2025", series:"Runa Kitty", img:"https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?w=800&q=80",
+    name_en:"Runa Kitty Set",
+    name_zh:"Runa Kitty 套装",
+    desc_en:"Runa Kitty collectible set — soft palette, detailed sculpting.",
+    desc_zh:"Runa Kitty 收藏套装，柔和配色、精致雕琢。",
+    specs:[["Series","Runa Kitty"],["Material","PVC"]] },
+  { id:"magirl", cat:"2025", series:"Magirl", img:"https://images.unsplash.com/photo-1601814933824-fd0b574dd592?w=800&q=80",
+    name_en:"Magirl: The 7th Lights Set",
+    name_zh:"Magirl：第七光 套装",
+    desc_en:"Magirl The 7th Lights — a sci-fi / magical-girl themed collectible set.",
+    desc_zh:"Magirl 第七光，魔法少女 / 科幻主题收藏套装。",
+    specs:[["Series","Magirl"],["Material","PVC + Resin"]] },
+  { id:"tutulong3", cat:"2025", series:"TutuLong", img:"https://images.unsplash.com/photo-1535378620166-273708d44ef4?w=800&q=80",
+    name_en:"TutuLong III Set",
+    name_zh:"TutuLong III 套装",
+    desc_en:"TutuLong III — the third installment in the popular TutuLong series.",
+    desc_zh:"TutuLong 第三代 — 经典 TutuLong 系列续作。",
+    specs:[["Series","TutuLong III"],["Material","PVC"]] },
+  { id:"miyee-cafe", cat:"2025", series:"Miyee Cafe", img:"https://images.unsplash.com/photo-1546554137-f86b9593a222?w=800&q=80",
+    name_en:"Miyee Cafe Set",
+    name_zh:"Miyee Cafe 套装",
+    desc_en:"Miyee Cafe — cafe-themed designer toys with detailed props.",
+    desc_zh:"Miyee Cafe 咖啡馆主题潮玩，附带精致道具。",
+    specs:[["Series","Miyee Cafe"],["Material","PVC + Resin"]] },
+
+  // Renowned IP
+  { id:"ip-stitch", cat:"IP", series:"Stitch", img:"https://images.unsplash.com/photo-1565891741441-64926e441838?w=800&q=80",
+    name_en:"Stitch Figure",
+    name_zh:"Stitch 史迪奇 玩偶",
+    desc_en:"Licensed Lilo & Stitch figure, crafted to capture the character's signature style.",
+    desc_zh:"Lilo & Stitch 授权正版玩偶，高度还原角色特征。",
+    specs:[["IP","Lilo & Stitch"],["Material","PVC"],["License","Authorized"]] },
+  { id:"ip-chicest", cat:"IP", series:"Chicest Mouse", img:"https://images.unsplash.com/photo-1608889335941-32ac5f2041b9?w=800&q=80",
+    name_en:"Chicest Mouse Figure",
+    name_zh:"粉红捷老鼠 玩偶",
+    desc_en:"Chicest Mouse — a designer take on the classic mouse character with a pink twist.",
+    desc_zh:"Chicest Mouse 经典老鼠角色，粉色时尚版重塑。",
+    specs:[["Type","Designer IP"],["Material","PVC"]] },
+  { id:"ip-chevy", cat:"IP", series:"Chevy Tiger", img:"https://images.unsplash.com/photo-1558877385-81a1c7e67d72?w=800&q=80",
+    name_en:"Chevy Tiger Mold Painting",
+    name_zh:"雪佛兰老虎 涂装款",
+    desc_en:"Chevy Tiger — hand-painted mold with custom artwork finish.",
+    desc_zh:"雪佛兰老虎，手工涂装模具，定制艺术漆面。",
+    specs:[["Type","Custom Paint"],["Material","Resin"]] },
+  { id:"ip-mickey", cat:"IP", series:"Mickey & Minnie", img:"https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=800&q=80",
+    name_en:"Mickey & Minnie Mini Figures",
+    name_zh:"米奇与米妮 小玩偶",
+    desc_en:"Mickey & Minnie mini figures — classic duo in collectible form.",
+    desc_zh:"米奇与米妮经典 CP 小玩偶，收藏级制作。",
+    specs:[["IP","Disney"],["Material","PVC"],["Size","Mini"]] },
+  { id:"ip-shinchan", cat:"IP", series:"Crayon Shin-chan", img:"https://images.unsplash.com/photo-1535378620166-273708d44ef4?w=800&q=80",
+    name_en:"Crayon Shin-chan Mini Figure",
+    name_zh:"蜡笔小新 小玩偶",
+    desc_en:"Officially licensed Crayon Shin-chan mini figure.",
+    desc_zh:"正版授权蜡笔小新小玩偶。",
+    specs:[["IP","Crayon Shin-chan"],["Material","PVC"]] },
+  { id:"ip-chipdale", cat:"IP", series:"Chip 'n' Dale", img:"https://images.unsplash.com/photo-1546554137-f86b9593a222?w=800&q=80",
+    name_en:"Chip 'n' Dale Figure",
+    name_zh:"奇奇与蒂蒂 玩偶",
+    desc_en:"Disney Chip 'n' Dale collectible figure.",
+    desc_zh:"迪士尼 奇奇与蒂蒂 收藏玩偶。",
+    specs:[["IP","Disney"],["Material","PVC"]] },
+
+  // Cultural
+  { id:"cultural-bing", cat:"cultural", series:"Bing Dwan Dwan", img:"https://images.unsplash.com/photo-1601814933824-fd0b574dd592?w=800&q=80",
+    name_en:"Winter Olympics Bing Dwan Dwan",
+    name_zh:"冬奥会 冰墩墩",
+    desc_en:"Beijing Winter Olympics mascot — Bing Dwan Dwan collectible figure.",
+    desc_zh:"北京冬奥会吉祥物 冰墩墩 收藏玩偶。",
+    specs:[["Theme","Winter Olympics"],["Material","PVC"]] },
+  { id:"cultural-whale", cat:"cultural", series:"[ODM] Buildings above Whale", img:"https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?w=800&q=80",
+    name_en:"[ODM] Buildings above Whale",
+    name_zh:"[ODM] 鲸背之上的城市",
+    desc_en:"ODM project — a stylized cityscape built on top of a whale.",
+    desc_zh:"ODM 项目 — 鲸鱼背上的城市意象，原创设计。",
+    specs:[["Type","ODM Project"],["Material","Resin"]] },
+  { id:"cultural-flowers", cat:"cultural", series:"Four Seasons' Flowers", img:"https://images.unsplash.com/photo-1591946614720-90a587da4a36?w=800&q=80",
+    name_en:"Four Seasons' Flowers (Four Nobel Ones)",
+    name_zh:"四季花卉（四君子）",
+    desc_en:"Four Seasons' Flowers — a Chinese cultural figure set based on the Four Nobel Ones.",
+    desc_zh:"四季花卉 — 基于中国传统四君子主题的文化玩偶套装。",
+    specs:[["Theme","Chinese Culture"],["Material","Resin"]] },
+  { id:"cultural-wenwen", cat:"cultural", series:"Wenwen", img:"https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?w=800&q=80",
+    name_en:"Changsha S&T Museum Wenwen",
+    name_zh:"长沙科技馆 文文",
+    desc_en:"Changsha Science and Technology Museum mascot — Wenwen figure.",
+    desc_zh:"长沙科技馆吉祥物 文文 玩偶。",
+    specs:[["Theme","Museum IP"],["Material":"Resin"],["Material","Resin"]] },
+  { id:"cultural-dino", cat:"cultural", series:"Museum Dino", img:"https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=800&q=80",
+    name_en:"Overseas Museum Dinosaur",
+    name_zh:"海外博物馆 恐龙",
+    desc_en:"Custom dinosaur figure produced for an overseas museum.",
+    desc_zh:"为海外博物馆定制的恐龙玩偶。",
+    specs:[["Theme","Museum IP"],["Material","Resin"]] },
+  { id:"cultural-mecha", cat:"cultural", series:"Mecha Warriors", img:"https://images.unsplash.com/photo-1558877385-81a1c7e67d72?w=800&q=80",
+    name_en:"Mecha Warriors Figures",
+    name_zh:"机甲战士 玩偶",
+    desc_en:"Mecha Warriors — sci-fi action figures with detailed armor design.",
+    desc_zh:"机甲战士，机甲装甲细节丰富的科幻动作玩偶。",
+    specs:[["Theme","Sci-Fi"],["Material","ABS + PVC"]] },
+
+  // Car Models
+  { id:"car-488", cat:"car", series:"Ferrari 488", img:"https://images.unsplash.com/photo-1594787318286-3d835c1d207f?w=800&q=80",
+    name_en:"Ferrari 488 Die-cast Model",
+    name_zh:"Ferrari 488 合金车模",
+    desc_en:"Ferrari 488 die-cast collectible model — high detail, premium finish.",
+    desc_zh:"Ferrari 488 锌合金收藏车模，细节精致、做工考究。",
+    specs:[["Scale","1:18 / 1:24"],["Material","Zinc Alloy"]] },
+  { id:"car-enzo", cat:"car", series:"Ferrari Enzo", img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80",
+    name_en:"Ferrari Enzo Die-cast Model",
+    name_zh:"Ferrari Enzo 合金车模",
+    desc_en:"Ferrari Enzo die-cast model with opening doors and detailed interior.",
+    desc_zh:"Ferrari Enzo 锌合金车模，可开门、内饰精致。",
+    specs:[["Scale","1:18"],["Material","Zinc Alloy"],["Feature","Opening doors"]] },
+];
+
+// Factory tour captions
+const FACTORY_CAPTIONS = {
+  en: ["Main Building of Production Facility", "Production Line", "Assembly Workshop", "Sorting Workshop", "Office Milestone Project Display Cabinet", "Action Figure Team WIP"],
+  zh: ["公司生产大楼主楼", "产线实景", "装配车间", "分拣车间", "办公室里程碑项目展柜", "动作玩偶团队 WIP"],
+};
+
+// 4 regions
+const PARTNERS = [
+  { region: "United States", flag: "🇺🇸",
+    en: ["Walmart", "Target", "Disney", "Melissa & Doug"],
+    zh: ["沃尔玛", "塔吉特", "迪士尼", "Melissa & Doug"] },
+  { region: "Japan", flag: "🇯🇵",
+    en: ["Nikkan", "Chica", "Mato"],
+    zh: ["日刊", "Chica", "Mato"] },
+  { region: "Europe", flag: "🇪🇺",
+    en: ["Bathtime"],
+    zh: ["Bathtime"] },
+  { region: "South Africa", flag: "🇿🇦",
+    en: ["Asura"],
+    zh: ["Asura"] },
+];
+
+// ============= state =============
+let state = { lang: "en", page: "home", productId: null, cat: "All", q: "" };
+
+// ============= helpers =============
+const $ = (sel, root=document) => root.querySelector(sel);
+const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+const t = (key) => I18N[state.lang][key] ?? key;
+
+function applyI18n(){
+  $$("[data-i18n]").forEach(el => { el.textContent = t(el.getAttribute("data-i18n")); });
+  $$("[data-i18n-ph]").forEach(el => el.setAttribute("placeholder", t(el.getAttribute("data-i18n-ph"))));
+  $$("[data-bind]").forEach(el => el.textContent = ENTITY[state.lang][el.getAttribute("data-bind")]);
+  document.documentElement.lang = state.lang;
+}
+
+function renderNav(){
+  const items = [
+    ["home","nav-home"], ["about","nav-about"], ["company","nav-company"],
+    ["products","nav-products"], ["partners","nav-partners"], ["contact","nav-contact"],
+  ];
+  const mk = (href, key) => `<a href="#" data-nav="${href}" class="nav-link ${state.page===href?'active':''}">${t(key)}</a>`;
+  const mkMobile = (href, key) => `<a href="#" data-nav="${href}" style="${state.page===href?'color:var(--brand-700);background:var(--brand-50)':''}">${t(key)}</a>`;
+  $("#navLinks").innerHTML = items.map(([h,k])=>mk(h,k)).join("");
+  $("#mobileNav").innerHTML = items.map(([h,k])=>mkMobile(h,k)).join("");
+}
+
+function renderStats(){
+  $("#stats").innerHTML = t("stats").map(s => `<div class="card stat"><div class="stat-v">${s.v}</div><div class="stat-l">${s.l}</div></div>`).join("");
+}
+
+function cardHTML(p, feat){
+  const name = state.lang==="zh" ? p.name_zh : p.name_en;
+  const catLabel = t("prod-cat-"+p.cat);
+  return `<a href="#" data-pid="${p.id}" class="card pcard">
+    <div class="pcard-img ${feat?'feat':''}"><img src="${p.img}" alt="${name.replace(/"/g,'&quot;')}" loading="lazy"></div>
+    <div class="pcard-body">
+      <div class="pcard-cat">${catLabel}</div>
+      <div class="pcard-name">${name}</div>
+      <div class="pcard-sub">Series · ${p.series}</div>
+    </div></a>`;
+}
+
+function renderFeat(){
+  const featured = PRODUCTS.filter(p => p.cat === "2025").slice(0, 4);
+  $("#featGrid").innerHTML = featured.map(p => cardHTML(p, true)).join("");
+}
+
+function renderValues(){
+  $("#valuesGrid").innerHTML = t("values").map(v => `<div class="card" style="padding:24px"><div style="font-weight:600;font-size:16px">${v.t}</div><p class="muted" style="margin-top:8px;font-size:14px;line-height:1.7">${v.b}</p></div>`).join("");
+}
+
+function renderProducts(){
+  const cats = ["All","2025","IP","cultural","car"];
+  $("#filterPills").innerHTML = cats.map(c => {
+    const active = state.cat === c;
+    return `<button class="pill ${active?'active':''}" data-cat="${c}">${t("prod-cat-"+c)}</button>`;
+  }).join("");
+  const q = state.q.trim().toLowerCase();
+  const list = PRODUCTS.filter(p => {
+    if (state.cat !== "All" && p.cat !== state.cat) return false;
+    if (!q) return true;
+    const hay = `${p.name_en} ${p.name_zh} ${p.series}`.toLowerCase();
+    return hay.includes(q);
+  });
+  if (list.length === 0) { $("#prodGrid").innerHTML = ""; $("#prodEmpty").style.display = "block"; }
+  else { $("#prodEmpty").style.display = "none"; $("#prodGrid").innerHTML = list.map(p => cardHTML(p, false)).join(""); }
+}
+
+function renderDetail(){
+  const p = PRODUCTS.find(x => x.id === state.productId);
+  if (!p) return;
+  const name = state.lang==="zh" ? p.name_zh : p.name_en;
+  const desc = state.lang==="zh" ? p.desc_zh : p.desc_en;
+  const catLabel = t("prod-cat-"+p.cat);
+  $("#detCrumb").textContent = name;
+  const specsHTML = p.specs.map(([k,v]) => `<div class="row"><div class="k">${k}</div><div>${v}</div></div>`).join("");
+  $("#detGrid").innerHTML = `
+    <div>
+      <div class="card" style="overflow:hidden"><div class="pcard-img" style="aspect-ratio:1/1"><img src="${p.img}" alt="${name.replace(/"/g,'&quot;')}"></div></div>
+    </div>
+    <div>
+      <div class="label">${catLabel} · ${p.series}</div>
+      <h1 style="font-size:28px;font-weight:800;margin:8px 0 0">${name}</h1>
+      <p class="muted" style="margin-top:16px;line-height:1.8">${desc}</p>
+      <div style="margin-top:24px">
+        <div class="label" style="margin-bottom:8px">${t("specs")}</div>
+        <div class="specs">${specsHTML}</div>
+      </div>
+      <div style="margin-top:24px;display:flex;gap:10px;flex-wrap:wrap">
+        <a href="#" data-nav="contact" class="btn btn-primary">${t("hero-cta2")}</a>
+        <a href="#" data-nav="products" class="btn btn-ghost">← ${t("prod-title")}</a>
+      </div>
+      <div style="margin-top:32px"><div id="detailFormMount"></div></div>
+    </div>`;
+  mountForm("detailFormMount", { productName: name });
+}
+
+function renderFactory(){
+  const caps = FACTORY_CAPTIONS[state.lang];
+  // 占位图用 Unsplash 玩具/工厂风格，注明"示例图"
+  const imgs = [
+    "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=900&q=80",
+    "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=900&q=80",
+    "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?w=900&q=80",
+    "https://images.unsplash.com/photo-1581092446327-9b52bd1570c2?w=900&q=80",
+    "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=900&q=80",
+    "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=900&q=80",
+  ];
+  $("#factoryGallery").innerHTML = imgs.map((src, i) => `
+    <div class="card">
+      <img src="${src}" alt="${caps[i]}" loading="lazy" />
+      <div class="cap">【${caps[i]}】</div>
+    </div>`).join("");
+}
+
+function renderPartners(){
+  $("#partnersGrid").innerHTML = PARTNERS.map(r => {
+    const list = r[state.lang];
+    return `<div class="card region-card">
+      <div class="region-h"><span class="region-flag">${r.flag}</span><div style="font-weight:700">${r.region}</div></div>
+      <ul class="partner-list">${list.map(n => `<li>${n}</li>`).join("")}</ul>
+    </div>`;
+  }).join("");
+}
+
+function mountForm(targetId, { productName } = {}){
+  const el = document.getElementById(targetId);
+  if (!el) return;
+  el.innerHTML = `
+    <form class="form-grid">
+      <div class="form-row">
+        <div class="field"><label>${t("f-name")}</label><input name="name" autocomplete="name"></div>
+        <div class="field"><label>${t("f-company")}</label><input name="company" autocomplete="organization"></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>${t("f-email")}</label><input name="email" type="email" required autocomplete="email"></div>
+        <div class="field"><label>${t("f-phone")}</label><input name="phone" autocomplete="tel"></div>
+      </div>
+      ${productName ? "" : `<div class="field"><label>${t("f-product")}</label><input name="product" value="${(productName||'').replace(/"/g,'&quot;')}"></div>`}
+      <div class="field"><label>${t("f-message")}</label><textarea name="message" rows="5" required></textarea></div>
+      <div class="errbox" style="display:none">${t("f-err")}</div>
+      <button class="btn btn-primary" type="submit">${t("f-submit")}</button>
+    </form>`;
+  if (productName) {
+    const f = el.querySelector("form");
+    const i = document.createElement("input");
+    i.type = "hidden"; i.name = "product"; i.value = productName;
+    f.appendChild(i);
+  }
+  el.querySelector("form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = el.querySelector("button[type=submit]");
+    const err = el.querySelector(".errbox");
+    err.style.display = "none";
+    btn.disabled = true; btn.textContent = t("f-submitting");
+    const fd = new FormData(e.target);
+    const payload = Object.fromEntries(fd.entries());
+    try {
+      // 在真站接 Supabase；这里 mock 提交
+      await new Promise(r => setTimeout(r, 600));
+      console.log("[inquiry mock]", payload);
+      el.innerHTML = `<div class="okbox">${t("f-ok")}</div>`;
+    } catch (e) {
+      err.style.display = "block";
+      btn.disabled = false; btn.textContent = t("f-submit");
+    }
+  });
+}
+
+function renderAll(){
+  applyI18n();
+  renderNav();
+  renderStats();
+  renderFeat();
+  renderValues();
+  renderProducts();
+  renderFactory();
+  renderPartners();
+  if (state.page === "detail") renderDetail();
+  if (state.page === "home" || state.page === "contact") {
+    const id = state.page === "home" ? "homeFormMount" : "contactFormMount";
+    mountForm(id, {});
+  }
+  $$(".page").forEach(p => p.classList.toggle("active", p.getAttribute("data-page") === state.page));
+  window.scrollTo({ top: 0 });
+}
+
+function go(page, opts = {}){
+  state.page = page;
+  if (opts.productId) state.productId = opts.productId;
+  renderAll();
+}
+
+// ============= events =============
+document.addEventListener("click", (e) => {
+  const nav = e.target.closest("[data-nav]");
+  if (nav) { e.preventDefault(); go(nav.getAttribute("data-nav")); return; }
+  const pid = e.target.closest("[data-pid]");
+  if (pid) { e.preventDefault(); go("detail", { productId: pid.getAttribute("data-pid") }); return; }
+  const cat = e.target.closest("[data-cat]");
+  if (cat) { state.cat = cat.getAttribute("data-cat"); renderProducts(); return; }
+  const sl = e.target.closest("[data-set-lang]");
+  if (sl) { setLang(sl.getAttribute("data-set-lang")); return; }
+});
+
+document.addEventListener("input", (e) => {
+  if (e.target && e.target.id === "searchInput") { state.q = e.target.value; renderProducts(); }
+});
+
+function setLang(l){
+  state.lang = l;
+  try { localStorage.setItem("sinopectech.lang", l); } catch {}
+  $$("[data-set-lang]").forEach(b => b.classList.toggle("active", b.getAttribute("data-set-lang") === l));
+  renderAll();
+}
+
+function init(){
+  let saved = null;
+  try { saved = localStorage.getItem("sinopectech.lang"); } catch {}
+  if (saved === "zh" || saved === "en") state.lang = saved;
+  else state.lang = ((navigator.language || "en").toLowerCase().startsWith("zh")) ? "zh" : "en";
+  document.getElementById("year").textContent = new Date().getFullYear();
+  $$("[data-set-lang]").forEach(b => b.classList.toggle("active", b.getAttribute("data-set-lang") === state.lang));
+  renderAll();
+}
+init();
+</script>
+</body>
+</html>

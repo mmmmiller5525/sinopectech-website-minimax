@@ -1,0 +1,76 @@
+// mock 数据（无 Supabase 时回退）
+import type { Product, About, Company, Partner, Contact, Settings } from "./types";
+
+export const MOCK_PRODUCTS: Product[] = [];
+export const MOCK_ABOUT: About = {
+  id: 1,
+  title_cn: "关于丹彩", title_en: "About Us",
+  subtitle_cn: "工厂主体 + 香港出口壳，双引擎服务全球客户",
+  subtitle_en: "Sinopec Technologies (HK) + 丹彩日用品 — ODM partnership serving global clients.",
+  content_cn: "",
+  content_en: "",
+};
+export const MOCK_COMPANY: Company = {
+  id: 1,
+  name_cn: "东莞市丹彩日用品有限公司",
+  name_en: "Dongguan Red Color Materials Co., Ltd. (丹彩日用品)",
+  address_cn: "广东省东莞市企石镇 16 栋 506 室",
+  address_en: "Room 506, Building 16, Qishi Town, Dongguan, Guangdong, China",
+  description_cn: "潮玩 / 动作玩偶 ODM 工厂",
+  description_en: "Designer toys & action figure ODM factory",
+  images: [],
+};
+export const MOCK_PARTNERS: Partner[] = [
+  { id: 1, name: "Walmart", region: "USA", logo_url: "", website: "https://www.walmart.com" },
+  { id: 2, name: "Target", region: "USA", logo_url: "", website: "https://www.target.com" },
+  { id: 3, name: "Disney", region: "USA", logo_url: "", website: "https://www.disney.com" },
+  { id: 4, name: "Melissa & Doug", region: "USA", logo_url: "", website: "https://www.melissaanddoug.com" },
+  { id: 5, name: "Nikkan", region: "Japan", logo_url: "", website: "" },
+  { id: 6, name: "Chica", region: "Japan", logo_url: "", website: "" },
+  { id: 7, name: "Mato", region: "Japan", logo_url: "", website: "" },
+  { id: 8, name: "Bathtime", region: "Europe", logo_url: "", website: "" },
+  { id: 9, name: "Asura", region: "South Africa", logo_url: "", website: "" },
+];
+export const MOCK_CONTACT: Contact = {
+  id: 1,
+  phone: "+86 150 1943 1630",
+  email: "cherryshi2012@126.com",
+  address_cn: "广东省东莞市企石镇 16 栋 506 室",
+  address_en: "Room 506, Building 16, Qishi Town, Dongguan, Guangdong, China",
+  wechat: "", whatsapp: "",
+};
+export const MOCK_SETTINGS: Settings = {
+  id: 1,
+  site_name_cn: "东莞市丹彩日用品有限公司",
+  site_name_en: "Sinopec Technologies Limited",
+  site_name_short_cn: "丹彩日用品",
+  site_name_short_en: "Sinopectech",
+  logo_url: "/logo.jpg",
+  favicon_url: "/favicon.ico",
+  hero_title_cn: "从东莞到世界\n2012 年起，匠心制物",
+  hero_title_en: "From Dongguan to the world.\nCrafted figures since 2012.",
+  hero_subtitle_cn: "Sinopec Technologies Limited（香港）是东莞市丹彩日用品有限公司的出口窗口。",
+  hero_subtitle_en: "Sinopec Technologies Limited (HK) is the export arm of 丹彩日用品.",
+  hero_video_url: "",
+  hero_image_url: "",
+  seo_title_cn: "丹彩日用品 · 潮玩 ODM 工厂",
+  seo_title_en: "Sinopectech · Chinese Model & Action Figure ODM",
+  seo_description_cn: "中国潮玩 / 动作玩偶 ODM 工厂",
+  seo_description_en: "Chinese Model & Action Figure Toys ODM Factory",
+  seo_keywords_cn: "潮玩,动作玩偶,ODM,工厂,东莞",
+  seo_keywords_en: "designer toys,action figure,ODM,factory,Dongguan",
+  home_stats: [
+    { value_cn: "13+", value_en: "13+", label_cn: "年贸易经验", label_en: "Years in trade" },
+    { value_cn: "3+", value_en: "3+", label_cn: "年潮玩经验", label_en: "Years in toys" },
+    { value_cn: "99.5%", value_en: "99.5%", label_cn: "出厂优良率", label_en: "Pass rate" },
+    { value_cn: "15+", value_en: "15+", label_cn: "全球合作伙伴", label_en: "Global partners" },
+  ],
+  home_featured_title_cn: "2025 新品", home_featured_title_en: "New for 2025",
+  home_featured_subtitle_cn: "11 个 IP 系列：腊肠狗、狗狗环游世界、暹罗猫、Momo's Series、Runa Kitty、Magirl、TutuLong III、Miyee Cafe 等。",
+  home_featured_subtitle_en: "11 IP series launched in 2025 — Dachshunds, Puppies' Trip, Siamese Cats, Momo's Series, Runa Kitty, Magirl, TutuLong III, Miyee Cafe and more.",
+  home_featured_cta_cn: "查看全部 →", home_featured_cta_en: "View All →",
+  home_about_title_cn: "关于丹彩", home_about_title_en: "About Us",
+  home_about_body_cn: "Sinopectech 成立于 2012 年，进入国际贸易领域。前十年专注出口订单，2022 年起切入潮玩 / 动作玩偶赛道。工厂当前保持 99.5% 优良品率，覆盖从原型到量产的全流程。",
+  home_about_body_en: "Established in 2012, Sinopec Technologies Limited entered the international trade field. After a decade of producing export orders, we ventured into the designer toy and action figure sector in 2022. Today our factory delivers a 99.5% excellent product rate — from prototype to mass production.",
+  home_about_cta_cn: "了解更多", home_about_cta_en: "Read More",
+};

@@ -1,0 +1,96 @@
+// 中英双语文案
+export const siteCopy = {
+  zh: {
+    siteName: "东莞市丹彩日用品有限公司", siteNameShort: "丹彩日用品",
+    brandTagline: "Original Design Manufacturer · 玩具原创设计与制造",
+    factoryEntity: { label: "工厂主体", name: "东莞市丹彩日用品有限公司", nameEn: "Dongguan Red Color Materials Co., Ltd.", address: "广东省东莞市企石镇 16 栋 506 室", role: "潮玩 / 动作玩偶 ODM 工厂" },
+    exportEntity: { label: "出口业务（香港）", name: "Sinopec Technologies Limited", address: "中国香港", role: "全球贸易、订单与物流对接" },
+    nav: { home: "首页", about: "关于我们", products: "产品中心", partners: "合作伙伴", contact: "联系我们" },
+    home: {
+      heroEyebrow: "中国潮玩 / 动作玩偶 ODM", heroTitle: "从东莞到世界\n2012 年起，匠心制物",
+      heroSubtitle: "Sinopec Technologies Limited（香港）是东莞市丹彩日用品有限公司的出口窗口。专注潮玩、动作玩偶、IP 授权形象、文化主题与合金模型的研发与生产，服务全球品牌。",
+      heroCtaPrimary: "查看产品", heroCtaSecondary: "立即询盘",
+      stats: [{ value: "13+", label: "年贸易经验" }, { value: "3+", label: "年潮玩经验" }, { value: "99.5%", label: "出厂优良率" }, { value: "15+", label: "全球合作伙伴" }],
+      featuredTitle: "2025 新品", featuredSubtitle: "11 个 IP 系列：腊肠狗、狗狗环游世界、暹罗猫、Momo's Series、Runa Kitty、Magirl、TutuLong III、Miyee Cafe 等。",
+      featuredCta: "查看全部 →",
+      aboutPreviewTitle: "关于丹彩",
+      aboutPreviewBody: "Sinopectech 成立于 2012 年，进入国际贸易领域。前十年专注出口订单，2022 年起切入潮玩 / 动作玩偶赛道。工厂当前保持 99.5% 优良品率，覆盖从原型到量产的全流程。",
+      aboutPreviewCta: "了解更多",
+    },
+    about: {
+      title: "关于丹彩", subtitle: "工厂主体 + 香港出口壳，双引擎服务全球客户",
+      storyTitle: "我们的故事", storyBody: "Sinopec Technologies, Ltd. 成立于 2012 年，专注国际贸易领域。十年出口订单积淀后，2022 年正式切入潮玩 / 动作玩偶赛道。",
+      factoryTitle: "工厂主体（生产端）", factoryBody: "东莞工厂拥有完整的内部产线，包括专用于批量生产的无尘车间。",
+      exportTitle: "出口业务（香港 Sinopec Technologies Limited）", exportBody: "香港实体负责对外报价、订单合同、国际物流与结算。",
+      values: [
+        { title: "品质优先", body: "多道质检 + 无尘车间量产，长期优良率 99.5% 以上。" },
+        { title: "全流程 ODM", body: "设计 / 开模 / 打样 / 量产 一体化。" },
+        { title: "全球网络", body: "北美、日本、欧洲、南非知名品牌的长期合作。" },
+        { title: "诚信贸易", body: "香港负责合同、付款、开票与物流。" },
+      ],
+    },
+    products: {
+      title: "产品中心", subtitle: "按分类浏览我们的核心产品线", searchPlaceholder: "搜索产品名称或系列…", empty: "未找到匹配的产品。",
+      categories: { PVC: "PVC 动作玩偶", ABS: "ABS 系列", Resin: "树脂模型", TPR: "搪胶玩偶", Alloy: "合金模型", Other: "其他" },
+      detailCta: "立即询盘", detailSpecs: "产品参数",
+    },
+    partners: { title: "合作伙伴", subtitle: "北美 · 日本 · 欧洲 · 南非", coming: "合作伙伴信息整理中，欢迎联系合作。" },
+    contact: {
+      title: "联系我们", subtitle: "我们会在 24 小时内回复您的询盘",
+      factoryLabel: "工厂地址", exportLabel: "贸易公司",
+      phoneLabel: "电话", emailLabel: "邮箱", wechatLabel: "微信", whatsappLabel: "WhatsApp",
+      formName: "您的姓名", formCompany: "公司名称（可选）", formEmail: "邮箱 *", formPhone: "电话 / WhatsApp（可选）",
+      formProduct: "感兴趣的产品（可选）", formMessage: "您的需求描述 *",
+      formSubmit: "提交询盘", formSubmitting: "提交中…", formSuccess: "已收到您的询盘，我们会尽快联系您。", formError: "提交失败，请稍后再试或直接邮件联系。",
+    },
+    footer: { rights: "版权所有", icp: "粤ICP备" },
+  },
+  en: {
+    siteName: "Dongguan Red Color Materials Co., Ltd.", siteNameShort: "Sinopectech",
+    brandTagline: "Original Design Manufacturer · Toys Design & Manufacturing",
+    factoryEntity: { label: "Manufacturing Entity", name: "Dongguan Red Color Materials Co., Ltd.", nameEn: "Dongguan Red Color Materials Co., Ltd.", address: "Room 506, Building 16, Qishi Town, Dongguan, Guangdong, China", role: "Designer toys & action figure ODM factory" },
+    exportEntity: { label: "Export Entity (Hong Kong)", name: "Sinopec Technologies Limited", address: "Hong Kong", role: "Global trade, order handling and logistics" },
+    nav: { home: "Home", about: "About", products: "Products", partners: "Partners", contact: "Contact" },
+    home: {
+      heroEyebrow: "Chinese Model & Action Figure Toys ODM", heroTitle: "From Dongguan to the world.\nCrafted figures since 2012.",
+      heroSubtitle: "Sinopec Technologies Limited is the Hong Kong export arm of Dongguan Red Color Materials Co., Ltd. (丹彩日用品).",
+      heroCtaPrimary: "View Products", heroCtaSecondary: "Request a Quote",
+      stats: [{ value: "13+", label: "Years in trade" }, { value: "3+", label: "Years in toys" }, { value: "99.5%", label: "Pass rate" }, { value: "15+", label: "Global partners" }],
+      featuredTitle: "New for 2025", featuredSubtitle: "11 IP series launched in 2025.",
+      featuredCta: "View All →",
+      aboutPreviewTitle: "About Us",
+      aboutPreviewBody: "Established in 2012, Sinopec Technologies Limited entered the international trade field. Today our factory delivers a 99.5% excellent product rate.",
+      aboutPreviewCta: "Read More",
+    },
+    about: {
+      title: "About Us", subtitle: "Factory + Hong Kong trade arm — dual engines for global clients",
+      storyTitle: "Our Story", storyBody: "Sinopec Technologies, Ltd. was established in 2012 and entered the international trade field.",
+      factoryTitle: "Manufacturing Entity (Production)", factoryBody: "Our Dongguan factory runs complete in-house production lines.",
+      exportTitle: "Export Entity (Hong Kong · Sinopec Technologies Limited)", exportBody: "The Hong Kong entity handles quotations, contracts, international logistics and settlement.",
+      values: [
+        { title: "Quality First", body: "Multi-stage QC; long-term pass rate above 99.5%." },
+        { title: "Full ODM Cycle", body: "From design and mold-making to prototyping and bulk production." },
+        { title: "Global Network", body: "Long-term partnerships with renowned brands." },
+        { title: "Trustworthy Trade", body: "HK office for smoother contracts, payment, invoicing and logistics." },
+      ],
+    },
+    products: {
+      title: "Products", subtitle: "Browse our core product lines by category", searchPlaceholder: "Search product or series…", empty: "No matching products found.",
+      categories: { PVC: "PVC Action Figures", ABS: "ABS Series", Resin: "Resin Models", TPR: "TPR Figures", Alloy: "Alloy Models", Other: "Other" },
+      detailCta: "Request a Quote", detailSpecs: "Specifications",
+    },
+    partners: { title: "Our Partners", subtitle: "North America · Japan · Europe · South Africa", coming: "Partner information being curated. Contact us to collaborate." },
+    contact: {
+      title: "Contact", subtitle: "We will reply to your inquiry within 24 hours",
+      factoryLabel: "Factory Address", exportLabel: "Trade Company",
+      phoneLabel: "Phone", emailLabel: "Email", wechatLabel: "WeChat", whatsappLabel: "WhatsApp",
+      formName: "Your name", formCompany: "Company (optional)", formEmail: "Email *", formPhone: "Phone / WhatsApp (optional)",
+      formProduct: "Product of interest (optional)", formMessage: "Your message *",
+      formSubmit: "Submit Inquiry", formSubmitting: "Submitting…", formSuccess: "We've received your inquiry and will be in touch soon.", formError: "Submission failed. Please try again or email us directly.",
+    },
+    footer: { rights: "All rights reserved", icp: "ICP" },
+  },
+} as const;
+
+export type Locale = keyof typeof siteCopy;
+export type Copy = (typeof siteCopy)[Locale];
