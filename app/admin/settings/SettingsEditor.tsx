@@ -17,7 +17,7 @@ export function SettingsEditor({ initial }: { initial: Settings }) {
       setMsg(res.ok ? "已保存" : (d.error || "保存失败"));
     });
   }
-  async function onUpload(field: "logo_url" | "favicon_url" | "hero_image_url", file: File) {
+  async function onUpload(field: "logo_url" | "favicon_url" | "hero_image_url" | "about_image_url", file: File) {
     setUploading(field); setMsg(null);
     const r = await uploadImage(file, { bucket: "assets" });
     setUploading(null);
