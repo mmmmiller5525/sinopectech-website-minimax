@@ -38,16 +38,6 @@ export function AboutContent({ about, settings }: { about: About; settings: Sett
       </section>
       <section className="section">
         <div className="container-x grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {(settings.about_stats || []).map((s, i) => (
-            <div key={i} className="card p-6 text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-brand-700">{locale === "zh" ? s.value_cn : s.value_en}</div>
-              <p className="mt-1 text-xs sm:text-sm text-gray-600">{locale === "zh" ? s.label_cn : s.label_en}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-      <section className="section">
-        <div className="container-x grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {(settings.about_values || []).map((v, i) => (
             <div key={i} className="card p-6">
               <div className="text-base font-semibold text-gray-900">{locale === "zh" ? v.title_cn : v.title_en}</div>
