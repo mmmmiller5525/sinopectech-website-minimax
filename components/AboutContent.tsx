@@ -1,8 +1,8 @@
 "use client";
 import { useLang } from "@/components/LangProvider";
-import type { About } from "@/lib/types";
+import type { About, Settings } from "@/lib/types";
 
-export function AboutContent({ about }: { about: About }) {
+export function AboutContent({ about, settings }: { about: About; settings: Settings }) {
   const { t, locale } = useLang();
   return (
     <>
@@ -12,6 +12,12 @@ export function AboutContent({ about }: { about: About }) {
           <p className="mt-2 text-gray-600">{(locale === "zh" ? about.subtitle_cn : about.subtitle_en) || t.about.subtitle}</p>
           <h2 className="mt-10 text-xl font-semibold text-gray-900">{t.about.storyTitle}</h2>
           <p className="mt-3 text-gray-600 leading-relaxed whitespace-pre-line">{(locale === "zh" ? about.content_cn : about.content_en) || t.about.storyBody}</p>
+          {settings.about_image_url && (
+            <div className="mt-8 rounded-2xl overflow-hidden ring-1 ring-black/5 shadow-sm">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={settings.about_image_url} alt="About" className="w-full h-auto object-cover" />
+            </div>
+          )}
         </div>
       </section>
       <section className="section bg-brand-50">
@@ -28,6 +34,16 @@ export function AboutContent({ about }: { about: About }) {
             <div className="text-sm text-gray-500">{t.exportEntity.address}</div>
             <p className="mt-4 text-sm text-gray-700 leading-relaxed">{t.about.exportBody}</p>
           </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="container-x grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {(settings.about_stats || []).map((s, i) => (
+            <div key={i} className="card p-6 text-center">
+              <div className="text-2xl sm:text-3xl font-bold text-brand-700">{locale === "zh" ? s.value_cn : s.value_en}</div>
+              <p className="mt-1 text-xs sm:text-sm text-gray-600">{locale === "zh" ? s.label_cn : s.label_en}</p>
+            </div>
+          ))}
         </div>
       </section>
       <section className="section">

@@ -5,14 +5,14 @@ import { uploadImage } from "@/lib/upload";
 import type { Product } from "@/lib/types";
 
 type Mode = "create" | "edit";
-const CATEGORIES = ["PVC", "ABS", "TPR", "Resin", "Alloy", "Other"];
 const EMPTY: Partial<Product> = { name_cn: "", name_en: "", category: "PVC", series: "", description_cn: "", description_en: "", image_url: "", gallery_images: [], is_active: true, display_order: 1, specs: [] };
 
-export function ProductForm({ mode, initial }: { mode: Mode; initial?: Product }) {
+export function ProductForm({ mode, initial, categories }: { mode: Mode; initial?: Product; categories: string[] }) {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
   const [form, setForm] = useState<Partial<Product>>(initial || EMPTY);
   const [uploading, setUploading] = useState(false);
+  const cats = categories.length > 0 ? categories : ["PVC", "ABS", "TPR", "Resin", "Alloy", "Other"];
   const [err, setErr] = useState<string | null>(null);
   const set = <K extends keyof Product>(k: K, v: Product[K]) => setForm(f => ({ ...f, [k]: v }));
 
@@ -57,7 +57,7 @@ export function ProductForm({ mode, initial }: { mode: Mode; initial?: Product }
           <Field label="Name (Chinese)" value={form.name_cn || ""} onChange={(v) => set("name_cn", v)} />
           <Field label="Name (English)" value={form.name_en || ""} onChange={(v) => set("name_en", v)} required />
           <div className="grid grid-cols-2 gap-4">
-            <SelectField label="Category" value={(form.category as string) || "PVC"} options={CATEGORIES} onChange={(v) => set("category", v)} />
+            <SelectField label="Category" value={(form.category as string) || cats[0]} options={cats} onChange={(v) => set("category", v)} />
             <Field label="Series" value={form.series || ""} onChange={(v) => set("series", v)} />
           </div>
           <div className="grid grid-cols-2 gap-4">
@@ -88,12 +88,23 @@ export function ProductForm({ mode, initial }: { mode: Mode; initial?: Product }
         <Textarea label="Description (English)" value={form.description_en || ""} onChange={(v) => set("description_en", v)} />
       </div>
       <div className="card p-5 space-y-4">
-        <h2 className="text-sm font-semibold text-gray-900">Specs (optional)</h2>
-        <p className="text-xs text-gray-500">一行一个：Material | 材质 | Eco-friendly PVC | 环保 PVC</p>
-        <textarea rows={5} value={(form.specs || []).map(s => `${s.k_en} | ${s.k_cn} | ${s.v_en} | ${s.v_cn}`).join("\n")} onChange={(e) => {
-          const specs = e.target.value.split("\n").filter(Boolean).map(line => { const [k_en, k_cn, v_en, v_cn] = line.split("|").map(s => s.trim()); return { k_en: k_en || "", k_cn: k_cn || k_en || "", v_en: v_en || "", v_cn: v_cn || v_en || "" }; });
-          set("specs", specs as any);
-        }} className="w-full rounded-xl border border-black/10 bg-white px-3 py-2 text-sm font-mono" />
+        <div className="flex items-center justify-between">
+          <h2 className="text-sm font-semibold text-gray-900">Specs (产品参数)</h2>
+          <button type="button" onClick={() => set("specs", [...(form.specs || []), { k_en: "", k_cn: "", v_en: "", v_cn: "" }] as any)} className="text-xs text-brand-700 hover:underline">+ Add spec</button>
+        </div>
+        <p className="text-xs text-gray-500">每行 4 个字段：英文标签 / 中文标签 / 英文值 / 中文值</p>
+        <div className="space-y-2">
+          {(form.specs || []).map((s, i) => (
+            <div key={i} className="grid grid-cols-2 sm:grid-cols-[1fr_1fr_1fr_1fr_auto] gap-2 items-center">
+              <input value={s.k_en} onChange={(e) => { const next = [...(form.specs || [])]; next[i] = { ...next[i], k_en: e.target.value }; set("specs", next as any); }} placeholder="Label (EN)" className="rounded-lg border border-black/10 px-2 py-1.5 text-sm" />
+              <input value={s.k_cn} onChange={(e) => { const next = [...(form.specs || [])]; next[i] = { ...next[i], k_cn: e.target.value }; set("specs", next as any); }} placeholder="标签 (CN)" className="rounded-lg border border-black/10 px-2 py-1.5 text-sm" />
+              <input value={s.v_en} onChange={(e) => { const next = [...(form.specs || [])]; next[i] = { ...next[i], v_en: e.target.value }; set("specs", next as any); }} placeholder="Value (EN)" className="rounded-lg border border-black/10 px-2 py-1.5 text-sm" />
+              <input value={s.v_cn} onChange={(e) => { const next = [...(form.specs || [])]; next[i] = { ...next[i], v_cn: e.target.value }; set("specs", next as any); }} placeholder="值 (CN)" className="rounded-lg border border-black/10 px-2 py-1.5 text-sm" />
+              <button type="button" onClick={() => set("specs", (form.specs || []).filter((_, idx) => idx !== i) as any)} className="text-xs text-red-600 hover:underline px-1">Remove</button>
+            </div>
+          ))}
+          {(form.specs || []).length === 0 && <div className="text-xs text-gray-400 text-center py-3">No specs yet. Click "Add spec" above.</div>}
+        </div>
       </div>
       {err && <div className="rounded-lg bg-red-50 border border-red-200 px-3 py-2 text-sm text-red-700">{err}</div>}
       <div className="flex items-center justify-between">

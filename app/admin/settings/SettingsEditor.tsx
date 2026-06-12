@@ -42,6 +42,46 @@ export function SettingsEditor({ initial }: { initial: Settings }) {
         <StatsEditor stats={form.home_stats || []} onChange={(s) => setForm({ ...form, home_stats: s })} />
       </Section>
 
+      <Section title="About Page (关于页)">
+        <ImageField label="About Hero 大图 (显示在文字下方)" field="about_image_url" value={form.about_image_url || ""} onChange={(v) => setForm({ ...form, about_image_url: v })} onUpload={(f) => onUpload("about_image_url", f)} uploading={uploading === "about_image_url"} />
+        <div className="pt-2 border-t border-black/5">
+          <div className="flex items-center justify-between mb-3">
+            <div>
+              <div className="text-sm font-medium text-gray-900">About 页 4 个 stat 数字</div>
+              <div className="text-xs text-gray-500 mt-1">显示在 About 页正文下方</div>
+            </div>
+            {(!form.about_stats || form.about_stats.length < 4) && (
+              <button type="button" onClick={() => setForm({ ...form, about_stats: [...(form.about_stats || []), { value_cn: "", value_en: "", label_cn: "", label_en: "" }] })} className="text-xs text-brand-700 hover:underline">+ Add stat</button>
+            )}
+          </div>
+          <div className="space-y-2">
+            {(form.about_stats || []).map((s, i) => (
+              <div key={i} className="grid grid-cols-2 sm:grid-cols-[1fr_1fr_1fr_1fr_auto] gap-2 items-center">
+                <input value={s.value_cn} onChange={(e) => { const next = [...(form.about_stats || [])]; next[i] = { ...next[i], value_cn: e.target.value }; setForm({ ...form, about_stats: next }); }} placeholder="数字 (CN)" className="rounded-lg border border-black/10 px-2 py-1.5 text-sm" />
+                <input value={s.value_en} onChange={(e) => { const next = [...(form.about_stats || [])]; next[i] = { ...next[i], value_en: e.target.value }; setForm({ ...form, about_stats: next }); }} placeholder="Value (EN)" className="rounded-lg border border-black/10 px-2 py-1.5 text-sm" />
+                <input value={s.label_cn} onChange={(e) => { const next = [...(form.about_stats || [])]; next[i] = { ...next[i], label_cn: e.target.value }; setForm({ ...form, about_stats: next }); }} placeholder="标签 (CN)" className="rounded-lg border border-black/10 px-2 py-1.5 text-sm" />
+                <input value={s.label_en} onChange={(e) => { const next = [...(form.about_stats || [])]; next[i] = { ...next[i], label_en: e.target.value }; setForm({ ...form, about_stats: next }); }} placeholder="Label (EN)" className="rounded-lg border border-black/10 px-2 py-1.5 text-sm" />
+                <button type="button" onClick={() => setForm({ ...form, about_stats: (form.about_stats || []).filter((_, idx) => idx !== i) })} className="text-xs text-red-600 hover:underline px-1">Remove</button>
+              </div>
+            ))}
+            {(form.about_stats || []).length === 0 && <div className="text-xs text-gray-400 text-center py-3">No stats yet.</div>}
+          </div>
+        </div>
+      </Section>
+
+      <Section title="Product Categories (产品分类)">
+        <div className="text-xs text-gray-500">后台产品管理用。修改后下拉菜单立即生效。</div>
+        <div className="space-y-2">
+          {(form.product_categories || []).map((c, i) => (
+            <div key={i} className="flex items-center gap-2">
+              <input value={c} onChange={(e) => { const next = [...(form.product_categories || [])]; next[i] = e.target.value; setForm({ ...form, product_categories: next }); }} className="flex-1 rounded-lg border border-black/10 px-3 py-1.5 text-sm" />
+              <button type="button" onClick={() => setForm({ ...form, product_categories: (form.product_categories || []).filter((_, idx) => idx !== i) })} className="text-xs text-red-600 hover:underline px-1">Remove</button>
+            </div>
+          ))}
+          <button type="button" onClick={() => setForm({ ...form, product_categories: [...(form.product_categories || []), ""] })} className="text-xs text-brand-700 hover:underline">+ Add category</button>
+        </div>
+      </Section>
+
       <Section title="Home Featured (首页 'New for XXXX' 段)">
         <div className="grid sm:grid-cols-2 gap-4">
           <F label="标题 (CN)" v={form.home_featured_title_cn} onChange={(x) => setForm({ ...form, home_featured_title_cn: x })} />

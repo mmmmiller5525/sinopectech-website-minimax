@@ -37,6 +37,9 @@ export type Company = {
   description_cn: string;
   description_en: string;
   images: string[];
+  map_lat: number;
+  map_lng: number;
+  map_zoom: number;
 };
 
 export type Partner = {
@@ -104,6 +107,9 @@ export type Settings = {
   home_about_body_en: string;
   home_about_cta_cn: string;
   home_about_cta_en: string;
+  about_image_url: string;
+  about_stats: HomeStat[];
+  product_categories: string[];
 };
 
 export type HomeStat = {

@@ -26,6 +26,9 @@ create table if not exists company (
   address_cn text, address_en text,
   description_cn text, description_en text,
   images jsonb,
+  map_lat double precision default 23.0225,
+  map_lng double precision default 113.8188,
+  map_zoom int default 15,
   created_at timestamp default now(), updated_at timestamp default now()
 );
 
@@ -64,6 +67,16 @@ create table if not exists settings (
   seo_title_cn varchar(255), seo_title_en varchar(255),
   seo_description_cn text, seo_description_en text,
   seo_keywords_cn text, seo_keywords_en text,
+  home_stats jsonb default '[]'::jsonb,
+  home_featured_title_cn varchar(255), home_featured_title_en varchar(255),
+  home_featured_subtitle_cn text, home_featured_subtitle_en text,
+  home_featured_cta_cn varchar(255), home_featured_cta_en varchar(255),
+  home_about_title_cn varchar(255), home_about_title_en varchar(255),
+  home_about_body_cn text, home_about_body_en text,
+  home_about_cta_cn varchar(255), home_about_cta_en varchar(255),
+  about_image_url varchar(500),
+  about_stats jsonb default '[]'::jsonb,
+  product_categories jsonb default '["PVC","ABS","TPR","Resin","Alloy","Other"]'::jsonb,
   created_at timestamp default now(), updated_at timestamp default now(),
   constraint settings_singleton check (id = 1)
 );

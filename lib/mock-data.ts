@@ -19,6 +19,9 @@ export const MOCK_COMPANY: Company = {
   description_cn: "潮玩 / 动作玩偶 ODM 工厂",
   description_en: "Designer toys & action figure ODM factory",
   images: [],
+  map_lat: 23.0225,
+  map_lng: 113.8188,
+  map_zoom: 15,
 };
 export const MOCK_PARTNERS: Partner[] = [
   { id: 1, name: "Walmart", region: "USA", logo_url: "", website: "https://www.walmart.com" },
@@ -73,4 +76,12 @@ export const MOCK_SETTINGS: Settings = {
   home_about_body_cn: "Sinopectech 成立于 2012 年，进入国际贸易领域。前十年专注出口订单，2022 年起切入潮玩 / 动作玩偶赛道。工厂当前保持 99.5% 优良品率，覆盖从原型到量产的全流程。",
   home_about_body_en: "Established in 2012, Sinopec Technologies Limited entered the international trade field. After a decade of producing export orders, we ventured into the designer toy and action figure sector in 2022. Today our factory delivers a 99.5% excellent product rate — from prototype to mass production.",
   home_about_cta_cn: "了解更多", home_about_cta_en: "Read More",
+  about_image_url: "",
+  about_stats: [
+    { value_cn: "20+", value_en: "20+", label_cn: "年行业经验", label_en: "Years in industry" },
+    { value_cn: "300+", value_en: "300+", label_cn: "SKU 累计", label_en: "Cumulative SKUs" },
+    { value_cn: "99.5%", value_en: "99.5%", label_cn: "出厂优良率", label_en: "Excellent rate" },
+    { value_cn: "15+", value_en: "15+", label_cn: "国家与地区", label_en: "Countries & regions" },
+  ],
+  product_categories: ["PVC", "ABS", "TPR", "Resin", "Alloy", "Other"],
 };
