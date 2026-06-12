@@ -108,8 +108,15 @@ export type Settings = {
   home_about_cta_cn: string;
   home_about_cta_en: string;
   about_image_url: string;
-  about_stats: HomeStat[];
+  about_values: AboutValue[];
   product_categories: string[];
+};
+
+export type AboutValue = {
+  title_cn: string;
+  title_en: string;
+  body_cn: string;
+  body_en: string;
 };
 
 export type HomeStat = {

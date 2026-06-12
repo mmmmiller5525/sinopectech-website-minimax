@@ -47,24 +47,31 @@ export function SettingsEditor({ initial }: { initial: Settings }) {
         <div className="pt-2 border-t border-black/5">
           <div className="flex items-center justify-between mb-3">
             <div>
-              <div className="text-sm font-medium text-gray-900">About 页 4 个 stat 数字</div>
-              <div className="text-xs text-gray-500 mt-1">显示在 About 页正文下方</div>
+              <div className="text-sm font-medium text-gray-900">About 页 4 个价值观卡片</div>
+              <div className="text-xs text-gray-500 mt-1">显示在 About 页底部。每项中英文标题 + 中英文描述。</div>
             </div>
-            {(!form.about_stats || form.about_stats.length < 4) && (
-              <button type="button" onClick={() => setForm({ ...form, about_stats: [...(form.about_stats || []), { value_cn: "", value_en: "", label_cn: "", label_en: "" }] })} className="text-xs text-brand-700 hover:underline">+ Add stat</button>
+            {(!form.about_values || form.about_values.length < 4) && (
+              <button type="button" onClick={() => setForm({ ...form, about_values: [...(form.about_values || []), { title_cn: "", title_en: "", body_cn: "", body_en: "" }] })} className="text-xs text-brand-700 hover:underline">+ Add value</button>
             )}
           </div>
-          <div className="space-y-2">
-            {(form.about_stats || []).map((s, i) => (
-              <div key={i} className="grid grid-cols-2 sm:grid-cols-[1fr_1fr_1fr_1fr_auto] gap-2 items-center">
-                <input value={s.value_cn} onChange={(e) => { const next = [...(form.about_stats || [])]; next[i] = { ...next[i], value_cn: e.target.value }; setForm({ ...form, about_stats: next }); }} placeholder="数字 (CN)" className="rounded-lg border border-black/10 px-2 py-1.5 text-sm" />
-                <input value={s.value_en} onChange={(e) => { const next = [...(form.about_stats || [])]; next[i] = { ...next[i], value_en: e.target.value }; setForm({ ...form, about_stats: next }); }} placeholder="Value (EN)" className="rounded-lg border border-black/10 px-2 py-1.5 text-sm" />
-                <input value={s.label_cn} onChange={(e) => { const next = [...(form.about_stats || [])]; next[i] = { ...next[i], label_cn: e.target.value }; setForm({ ...form, about_stats: next }); }} placeholder="标签 (CN)" className="rounded-lg border border-black/10 px-2 py-1.5 text-sm" />
-                <input value={s.label_en} onChange={(e) => { const next = [...(form.about_stats || [])]; next[i] = { ...next[i], label_en: e.target.value }; setForm({ ...form, about_stats: next }); }} placeholder="Label (EN)" className="rounded-lg border border-black/10 px-2 py-1.5 text-sm" />
-                <button type="button" onClick={() => setForm({ ...form, about_stats: (form.about_stats || []).filter((_, idx) => idx !== i) })} className="text-xs text-red-600 hover:underline px-1">Remove</button>
+          <div className="space-y-3">
+            {(form.about_values || []).map((v, i) => (
+              <div key={i} className="rounded-xl border border-black/5 p-3 bg-gray-50/50">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="text-xs font-semibold text-gray-500">#{i + 1}</div>
+                  <button type="button" onClick={() => setForm({ ...form, about_values: (form.about_values || []).filter((_, idx) => idx !== i) })} className="text-xs text-red-600 hover:underline">Remove</button>
+                </div>
+                <div className="grid grid-cols-2 gap-2 mb-2">
+                  <input value={v.title_cn} onChange={(e) => { const next = [...(form.about_values || [])]; next[i] = { ...next[i], title_cn: e.target.value }; setForm({ ...form, about_values: next }); }} placeholder="标题 (CN, 如 品质优先)" className="rounded-lg border border-black/10 px-2 py-1.5 text-sm" />
+                  <input value={v.title_en} onChange={(e) => { const next = [...(form.about_values || [])]; next[i] = { ...next[i], title_en: e.target.value }; setForm({ ...form, about_values: next }); }} placeholder="Title (EN, e.g. Quality First)" className="rounded-lg border border-black/10 px-2 py-1.5 text-sm" />
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  <textarea rows={2} value={v.body_cn} onChange={(e) => { const next = [...(form.about_values || [])]; next[i] = { ...next[i], body_cn: e.target.value }; setForm({ ...form, about_values: next }); }} placeholder="描述 (CN)" className="rounded-lg border border-black/10 px-2 py-1.5 text-sm" />
+                  <textarea rows={2} value={v.body_en} onChange={(e) => { const next = [...(form.about_values || [])]; next[i] = { ...next[i], body_en: e.target.value }; setForm({ ...form, about_values: next }); }} placeholder="Body (EN)" className="rounded-lg border border-black/10 px-2 py-1.5 text-sm" />
+                </div>
               </div>
             ))}
-            {(form.about_stats || []).length === 0 && <div className="text-xs text-gray-400 text-center py-3">No stats yet.</div>}
+            {(form.about_values || []).length === 0 && <div className="text-xs text-gray-400 text-center py-3">No values yet.</div>}
           </div>
         </div>
       </Section>

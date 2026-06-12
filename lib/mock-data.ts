@@ -77,11 +77,11 @@ export const MOCK_SETTINGS: Settings = {
   home_about_body_en: "Established in 2012, Sinopec Technologies Limited entered the international trade field. After a decade of producing export orders, we ventured into the designer toy and action figure sector in 2022. Today our factory delivers a 99.5% excellent product rate — from prototype to mass production.",
   home_about_cta_cn: "了解更多", home_about_cta_en: "Read More",
   about_image_url: "",
-  about_stats: [
-    { value_cn: "20+", value_en: "20+", label_cn: "年行业经验", label_en: "Years in industry" },
-    { value_cn: "300+", value_en: "300+", label_cn: "SKU 累计", label_en: "Cumulative SKUs" },
-    { value_cn: "99.5%", value_en: "99.5%", label_cn: "出厂优良率", label_en: "Excellent rate" },
-    { value_cn: "15+", value_en: "15+", label_cn: "国家与地区", label_en: "Countries & regions" },
+  about_values: [
+    { title_cn: "品质优先", title_en: "Quality First", body_cn: "多道质检 + 无尘车间量产，长期优良率 99.5% 以上。", body_en: "Multi-stage QC; long-term pass rate above 99.5%." },
+    { title_cn: "全流程 ODM", title_en: "Full ODM Cycle", body_cn: "设计 / 开模 / 打样 / 量产 一体化。", body_en: "From design and mold-making to prototyping and bulk production." },
+    { title_cn: "全球网络", title_en: "Global Network", body_cn: "北美、日本、欧洲、南非知名品牌的长期合作。", body_en: "Long-term partnerships with renowned brands worldwide." },
+    { title_cn: "诚信贸易", title_en: "Trustworthy Trade", body_cn: "香港负责合同、付款、开票与物流。", body_en: "HK office for smoother contracts, payment, invoicing and logistics." },
   ],
   product_categories: ["PVC", "ABS", "TPR", "Resin", "Alloy", "Other"],
 };

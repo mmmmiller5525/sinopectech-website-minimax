@@ -75,7 +75,7 @@ create table if not exists settings (
   home_about_body_cn text, home_about_body_en text,
   home_about_cta_cn varchar(255), home_about_cta_en varchar(255),
   about_image_url varchar(500),
-  about_stats jsonb default '[]'::jsonb,
+  about_values jsonb default '[]'::jsonb,
   product_categories jsonb default '["PVC","ABS","TPR","Resin","Alloy","Other"]'::jsonb,
   created_at timestamp default now(), updated_at timestamp default now(),
   constraint settings_singleton check (id = 1)
